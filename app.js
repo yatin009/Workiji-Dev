@@ -7,6 +7,11 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var firebase = require('./routes/firebase');
+var importRoute = require('./routes/import');
+var register = require('./routes/register');
+var twilio = require('./routes/twilio');
+var twitter = require('./routes/twitter');
 
 var app = express();
 
@@ -24,6 +29,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/firebase', firebase);
+app.use('/import', importRoute);
+app.use('/register', register);
+app.use('/twilio', twilio);
+app.use('/twitter', twitter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

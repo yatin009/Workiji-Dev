@@ -12,6 +12,12 @@
     "express": "~4.15.2",
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "async": "^2.4.1",
+    "dateformat": "^2.0.0",
+    "firebase-admin": "4.2.1",
+    "node-geocoder": "3.16.0",
+    "twilio": "^3.0.0",
+    "twitter": "1.7.0"
   }
 }
