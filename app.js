@@ -1,19 +1,28 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const admin = require('firebase-admin');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-var firebase = require('./routes/firebase');
-var importRoute = require('./routes/import');
-var register = require('./routes/register');
-var twilio = require('./routes/twilio');
-var twitter = require('./routes/twitter');
+// Fetch the service account key JSON file contents
+const serviceAccount = require("./QikDispatch-Dev-549fe5876000.json");
 
-var app = express();
+// Initialize the app with a service account, granting admin privileges
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://qikdispatch-dev.firebaseio.com/"
+});
+
+const index = require('./routes/index');
+const users = require('./routes/users');
+const importRoute = require('./routes/import');
+const register = require('./routes/register');
+const twilio = require('./routes/twilio');
+const twitter = require('./routes/twitter');
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,11 +38,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/firebase', firebase);
 app.use('/import', importRoute);
 app.use('/register', register);
 app.use('/twilio', twilio);
 app.use('/twitter', twitter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
