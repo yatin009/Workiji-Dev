@@ -1,5 +1,319 @@
-extends layout
+doctype html
+html(lang='en')
+    head
+        // Html Page Specific
+        meta(charset='utf-8')
+        title Pointer - Startup Landing Page
+        meta(name='description', content='Startup landing page')
+        meta(name='author', content='Multifour | multifour.com')
+        // Mobile Specific
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+        //if lt IE 9
+          script(type='text/javascript', src='scripts/html5shiv.js')
+        // CSS
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/animate.css')
+        link(rel='stylesheet', href='/stylesheets/simple-line-icons.css')
+        link(rel='stylesheet', href='/stylesheets/soc-icons.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        // Favicons
+        link(rel='icon', href='images/favicon.ico')
+        link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='images/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='images/apple-touch-icon-114x114.png')
+    body
+        // PRELOADER
+        #preloader
+            .clock
+                .arrow_sec
+                .arrow_min
+        #wrap
+            // HEADER BEGIN
+            header#header
+                .container
+                    a.logo(href='#')
+                        img(src='./images/logo3.png', alt='Best start for your business', height='40', width='45')
+                    a.login_btn(href='#') Login
+                    ul.soc_nav
+                        li
+                            a.icon-soc-googleplus(href='#')
+                        li
+                            a.icon-soc-facebook(href='#')
+                        li
+                            a.icon-soc-twitter(href='#')
+            // HEADER END
+            // INTRO BEGIN
+            section#intro
+                .container
+                    .row
+                        .col-lg-6.col-md-7.col-sm-6
+                            .slogan
+                                h2.wow.fadeInRight(data-wow-delay='0.6s', data-wow-duration='0.5s') Best start
+                                h3.wow.fadeInLeft(data-wow-delay='0.9s', data-wow-duration='0.5s') for your business
+                                p.wow.fadeInRight(data-wow-delay='1.2s')
+                                    | The Workiji mobile app manages on-demand service requests for buildings including Hotels,
+                                    | Apartments, Condominium, and other type of buildings.
+                        .col-lg-4.col-lg-offset-2.col-md-5.col-sm-6
+                            form#register_form(role='form')
+                                .title.wow.flipInX(data-wow-duration='0.6s')  Register now
+                                .form-group
+                                    input#name.form-control.wow.flipInX(type='text', data-wow-delay='0.8s', data-wow-duration='0.2s', placeholder='Full name', name='name')
+                                .form-group
+                                    input#email.form-control.wow.flipInX(type='email', data-wow-delay='1s', data-wow-duration='0.2s', placeholder='Email Address', name='email')
+                                .form-group
+                                    input#username.form-control.wow.flipInX(type='text', data-wow-delay='1.2s', data-wow-duration='0.2s', placeholder='Address', name='username')
+                                .form-group
+                                    input#password.form-control.wow.flipInX(type='password', data-wow-delay='1.4s', data-wow-duration='0.2s', placeholder='Contact Number', name='password')
+                                button.btn.btn_start.wow.flipInX(type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Start
+                #slides(data-stellar-ratio='0.4')
+                    .slides-container
+                        img(src='images/1.jpg', alt='')
+                        img(src='images/2.jpg', alt='')
+                        img(src='images/3.jpg', alt='')
+            // INTRO END
+            // SERVICES BEGIN
+            section#services
+                .container
+                    .row
+                        .col-md-4.service
+                            i.icon-screen-desktop
+                            h4 Service Request(SR) Inbox Queue
+                            ul(type='disc')
+                                li(type='disc') Use Mobile Phone to snap image of maintenance issues &amp; SMS to a central phone number
+                                li(type='disc') Deliver SMS SR to Central Inbox
+                                li(type='disc') Building Agent Central Inbox
+                                li(type='disc') Pull to Refresh Notification for SR that is being worked upon
+                                li(type='disc') Filter SR status
 
-block content
-  h1= title
-  p Welcome to #{title}
+                        .col-md-4.service
+                            i.icon-doc
+                            h4 Triage, Dispatch, and Approval for SR
+                            ul(type='disc')
+                                li(type='disc') Intelligent SR parsing &amp; dispatch to Contractor
+                                li(type='disc') Receive Quotation from Contractors
+                                li(type='disc') Approval &amp; eSignature for Quotation
+                        .col-md-4.service
+                            i.icon-diamond
+                            h4 Map View for all SR and Work Orders
+                            ul(type='disc')
+                                li(type='disc') Geocoding of SR &amp; Work Orders
+                                li(type='disc') Navigate PINs on map for all SR &amp; Work Orders
+                        .clearfix.visible-lg.visible-md
+                        .col-md-4.service
+                            i.icon-eye
+                            h4 Contractor Management
+                            ul(type='disc')
+                                li(type='disc') Manage all SR assigned to Contractors
+                                li(type='disc') Keep track of Work Orders
+                                li(type='disc') Track progress of Contractors $spend
+                        .col-md-4.service
+                            i.icon-chemistry
+                            h4 Work Management
+                            ul(type='disc')
+                                li(type='disc') Generate &amp; Schedule a Work Order
+                                li(type='disc') Timeline view to track Progress of Work Orders
+                                li(type='disc') Timeline view to track Progress of Work Orders
+                        .col-md-4.service
+                            i.icon-heart
+                            h4 User Management
+                            ul(type='disc')
+                                li(type='disc') Authenticate Users with Firebase Authentication
+                                li(type='disc') Manage all Users for an Organization and for Buildings
+                                li(type='disc') Manage Contractors assigned to Organization
+                        .clearfix.visible-lg.visible-md
+                        .col-md-4.service
+                            i.icon-eye
+                            h4 Building Management
+                            ul(type='disc')
+                                li(type='disc') Setup Buildings per Organization
+                                li(type='disc') Create or Import Building data (floors &amp; rooms)
+                                li(type='disc') Track maintenance Service Requests for all Suites
+                        .col-md-4.service
+                            i.icon-chemistry
+                            h4 Real Time Analytics Dashboard
+                            ul(type='disc')
+                                li(type='disc') Analytics Summary for all SR and Work Orders
+                                li(type='disc') Set up Custom Events for Dashboard Monitoring
+                                li(type='disc') Switch between pie, line graph views
+                        .col-md-4.service
+                            i.icon-heart
+                            h4 Calendar Appointment Scheduler
+                            ul(type='disc')
+                                li(type='disc') Voice Command to create Calendar Event for Work Order
+                                li(type='disc') Navigate Work Orders from Calendar
+            // SERVICES END
+            // FEATURES BEGIN
+            section#features
+                #feature_img
+                .container
+                    .row
+                        .col-md-6
+                            h3 Fresh features
+                            ul.triangle_list
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                li Quisque gravida commodo velit, eget porta leo sagittis vel.
+                                li Aenean egestas vehicula purus in euismod.
+                                li Etiam dictum auctor interdum.
+                            a.round_btn_dark(href='') More features
+                        .col-md-6
+            // FEATURES END
+            // FAQ BEGIN
+            section#faq
+                .container
+                    h3 FAQ
+                    .row
+                        .col-md-6
+                            .panel
+                                a.panel-heading(data-toggle='collapse', href='#question1') Frequently asked questions #1
+                                #question1.panel-collapse.collapse.in
+                                    .panel-body
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                            .panel
+                                a.panel-heading.collapsed(data-toggle='collapse', href='#question2') Frequently asked questions #2
+                                #question2.panel-collapse.collapse
+                                    .panel-body
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                            .panel
+                                a.panel-heading.collapsed(data-toggle='collapse', href='#question3') Frequently asked questions #3
+                                #question3.panel-collapse.collapse
+                                    .panel-body
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                        .col-md-6
+                            .panel
+                                a.panel-heading.collapsed(data-toggle='collapse', href='#question4') Frequently asked questions #4
+                                #question4.panel-collapse.collapse
+                                    .panel-body
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                            .panel
+                                a.panel-heading.collapsed(data-toggle='collapse', href='#question5') Frequently asked questions #5
+                                #question5.panel-collapse.collapse
+                                    .panel-body
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                            .panel
+                                a.panel-heading(data-toggle='collapse', href='#question6') Frequently asked questions #6
+                                #question6.panel-collapse.collapse.in
+                                    .panel-body
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dictum auctor interdum. Aenean egestas vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+            // FAQ END
+            // TESTIMONIALS BEGIN
+            section#testimonials
+                h4 Testimonials
+                #testimonials-slider.owl-carousel
+                    .item
+                        .quote
+                            | Aenean vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    Sarah Cole
+                    .item
+                        .quote  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    Jim Spelding
+                    .item
+                        .quote  Quisque gravida commodo velit, eget porta leo sagittis vel.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    Tiffany McFlirt
+                    .item
+                        .quote
+                            | Aenean vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    Tom Marmon
+                    .item
+                        .quote  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    Jessica Sweet
+                    .item
+                        .quote
+                            | Aenean vehicula purus in euismod. Quisque gravida commodo velit, eget porta leo sagittis vel.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    John White
+                    .item
+                        .quote  Quisque gravida commodo velit, eget porta leo sagittis vel.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    Helga Sunny
+                    .item
+                        .quote  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .author
+                            .photo
+                                img(src='images/mem.jpg', alt='author')
+                            |                    Ted Zimon
+            // TESTIMONIALS END
+            // CONTACT BEGIN
+            section#contact
+                .container
+                    .row
+                        .col-md-4
+                            h4 Contact us
+                            ul.contact_data_list
+                                li
+                                    i.icon-call-in
+                                    |  (416) 871-0700
+                                li
+                                    i.icon-pointer
+                                    |  Address,  Postal code,  City,  Country
+                                li
+                                    i.icon-envelope
+                                    |  najier@email.com
+                        .col-md-5
+                            h4 Subscribe
+                            form#subscribe_form(action='scripts/subscribe.php', method='post')
+                                .input-group
+                                    input#subscribe_email.form-control(type='email', name='email', placeholder='Enter your email here')
+                                    .input-group-btn
+                                        button#subscribe_submit.btn(type='submit')
+                                            i.icon-envelope
+                            p Subscribe to our newsletter, actions and updates
+                        .col-md-3
+                            h4 Follow us
+                            ul.soc_nav
+                                li
+                                    a.icon-soc-googleplus(href='#')
+                                li
+                                    a.icon-soc-facebook(href='#')
+                                li
+                                    a.icon-soc-twitter(href='#')
+            // CONTACT END
+            // FOOTER BEGIN
+            footer#footer
+                .container
+                    a.logo(href='#')
+                        img(src='./images/logo3.png', alt='Best start for your business', height='40', width='45')
+                    p
+                        | © 2017 Workiji
+                        br
+                        |                Designed by WebGuru.com
+            // FOOTER END
+        // MODALS BEGIN
+        // subscribe modal
+        #modalSubscribe.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                    h3.modal-title
+        // MODALS END
+        // JavaScript
+        script(src='javascripts/jquery-1.8.2.min.js')
+        script(src='javascripts/bootstrap.min.js')
+        script(src='javascripts/owl.carousel.min.js')
+        script(src='javascripts/jquery.validate.min.js')
+        script(src='javascripts/wow.min.js')
+        script(src='javascripts/smoothscroll.js')
+        script(src='javascripts/jquery.stellar.min.js')
+        script(src='javascripts/jquery.superslides.min.js')
+        script(src='javascripts/placeholders.jquery.min.js')
+        script(src='javascripts/custom.js')
+        //if lte IE 9
+          script(src='scripts/respond.min.js')
