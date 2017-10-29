@@ -5,6 +5,7 @@
 var express = require('express');
 var router = express.Router();
 let Ticket = require('../models/twilioTicket.js');
+let OTP = require('../models/otp.js');
 let twilio = require('twilio');
 let admin = require('firebase-admin');
 let async = require('async');
@@ -232,5 +233,77 @@ function deleteAllMessages(messageList, res) {
     res.status(200);
     res.send('Deleted ' + messageList.length + ' messages');
 }
+
+router.post("/generate_otp", function (req, res) {
+    console.log(req.body);
+    let number = req.body.number;
+    let otpNumber = getRandomNumber();
+    insertIntoFirebase(number, otpNumber);
+    var otpMessage = 'Please enter the following 4-digit code to verify your number : '+otpNumber;
+    client.messages.create({
+        body: otpMessage,
+        to: number,  // Text this number
+        from: '+16479302246' // From a valid Twilio number
+    }, function (err, message) {
+        if (!err) {
+            res.status(200)
+            res.send('Message Sent');
+        } else {
+            res.status(err.status);
+            res.send(err)
+        }
+    });
+});
+
+function getRandomNumber(){
+    return Math.floor(1000 + Math.random() * 9000);
+}
+
+function insertIntoFirebase(number, otpNumber){
+    let newPostKey = database.ref("otp").push().key;
+    var otp = new OTP(number, otpNumber)
+    otp.otpKey = newPostKey;
+    admin.database().ref("otp/" + newPostKey).set(
+        otp
+    );
+}
+
+router.post("/verify_otp", function (req, res) {
+    console.log(req.body);
+    var otpBody = req.body;
+    verifyOTP(new OTP(otpBody.number, otpBody.otp), res)
+});
+
+function verifyOTP(otp, res) {
+    var verified = false, otpChildToRemove;
+    let ref = database.ref("otp");
+    ref.once('value', function (snapshot) {
+        snapshot.forEach(function (childSnap) {
+            let otpChild = childSnap.val();
+            if(otpChild.number === otp.number && otp.otp === otpChild.otp){
+                verified = true;
+                otpChildToRemove = otpChild;
+            }
+        });
+        if(verified){
+            res.status(200);
+            res.send('OTP verified');
+            removeOTPObjectFromFirebase(otpChildToRemove)
+        }else{
+            res.status(200);
+            res.send('OTP not verified');
+        }
+    }, function (errorObject) {
+        console.log("The read failed: " + errorObject.code);
+        res.status(402);
+        res.send(errorObject.code);
+    });
+}
+
+function removeOTPObjectFromFirebase(otp) {
+    let del_ref = database.ref("otp/" + otp.otpKey);
+    del_ref.remove()
+}
+
 
 module.exports = router;

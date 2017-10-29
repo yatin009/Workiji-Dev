@@ -26,8 +26,8 @@ $(document).ready(function(){
 //------------------------------------------------------------------------
     var owl = $("#testimonials-slider");
     owl.owlCarousel({
-        items : 5, 
-        itemsDesktop : [1400,4], 
+        items : 5,
+        itemsDesktop : [1400,4],
         itemsDesktopSmall : [1200,3], 
         itemsTablet: [900,2], 
         itemsMobile : [600,1],
@@ -147,10 +147,10 @@ $(document).ready(function(){
                 required: true,
                 email: true
             },
-			username: "required",
-			password: {
+            address: "required",
+            contactNumber: {
      			required: true,
-      			minlength: 4
+      			minlength: 8
     		}
         },
         errorPlacement: function(error, element) {
@@ -162,9 +162,9 @@ $(document).ready(function(){
                 required: "What's your email?",
                 email: "Please, enter a valid email"
             },
-			username: "What's your username?",
-			password: {
-      			required: "What's your password?",
+            address: "What's your address?",
+            contactNumber: {
+      			required: "What's your contact?",
       			minlength: jQuery.format("At least {0} characters")
     		}
         },
@@ -177,7 +177,9 @@ $(document).ready(function(){
         success: function(element) {
             element
             .text('').addClass('valid')
+            //Use modal popups to display messages
+            // $('#modalSubscribe .modal-title').html('<i class="icon-key">Please enter the OTP!');
+            // $('#modalSubscribe').modal('show');
         }
-    }); 
-	
+    });
 });
