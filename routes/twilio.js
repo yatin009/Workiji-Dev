@@ -5,12 +5,14 @@
 var express = require('express');
 var router = express.Router();
 let Ticket = require('../models/twilioTicket.js');
+let HELPER = require('../helper/helperFunctions.js');
 let OTP = require('../models/otp.js');
 let twilio = require('twilio');
 let admin = require('firebase-admin');
 let async = require('async');
 let NodeGeocoder = require('node-geocoder');
 const dateFormat = require('dateformat');
+let Organization = require('../models/organization.js');
 
 let options = {
     provider: 'google',
@@ -237,6 +239,10 @@ function deleteAllMessages(messageList, res) {
 router.post("/generate_otp", function (req, res) {
     console.log(req.body);
     let number = req.body.number;
+    if(!number){
+        res.status(400);
+        res.send("Provide number")
+    }
     let otpNumber = getRandomNumber();
     insertIntoFirebase(number, otpNumber);
     var otpMessage = 'Please enter the following 4-digit code to verify your number : '+otpNumber;
@@ -271,7 +277,7 @@ function insertIntoFirebase(number, otpNumber){
 router.post("/verify_otp", function (req, res) {
     console.log(req.body);
     var otpBody = req.body;
-    verifyOTP(new OTP(otpBody.number, otpBody.otp), res)
+    verifyOTP(otpBody, res)
 });
 
 function verifyOTP(otp, res) {
@@ -280,15 +286,16 @@ function verifyOTP(otp, res) {
     ref.once('value', function (snapshot) {
         snapshot.forEach(function (childSnap) {
             let otpChild = childSnap.val();
-            if(otpChild.number === otp.number && otp.otp === otpChild.otp){
+            if(otpChild.number === otp.contactNumber && otp.otp === otpChild.otp){
                 verified = true;
                 otpChildToRemove = otpChild;
             }
         });
         if(verified){
-            res.status(200);
-            res.send('OTP verified');
             removeOTPObjectFromFirebase(otpChildToRemove)
+            HELPER.createOrganizationCode(new Organization(otp),res);
+            // res.status(200);
+            // res.send('OTP verified');
         }else{
             res.status(200);
             res.send('OTP not verified');

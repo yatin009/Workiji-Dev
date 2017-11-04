@@ -10,15 +10,16 @@ let User = require('../models/user.js');
 let ContractorUser = require('../models/contractorUser.js');
 let FirebaseUser = require('../models/firebaseUser.js');
 let Company = require('../models/company.js');
+let HELPER = require('../helper/helperFunctions.js');
 
 const database = admin.database();
 
 router.post('/organization', function (req, res) {
     var org = req.body;
-    createOrganizationCode(new Organization(org), res);
+    HELPER.createOrganizationCode(new Organization(org), res);
 });
 
-function createOrganizationCode(organization, res){
+let createOrganizationCode = function (organization, res){
     getAllOrganizationCode(function(organizationCodes){
         if(organizationCodes === -1){
             res.status(500);
@@ -35,7 +36,7 @@ function createOrganizationCode(organization, res){
         organization.isEnabled = true;
         createOrganizationInFirebase(organization, res);
     });
-}
+};
 
 function getRandomNumber(){
     return Math.floor(1000 + Math.random() * 9000);
@@ -180,4 +181,5 @@ function createUserInFirebase(userRecord, usr, res){
     res.status(200);
     res.send("User Created");
 }
+
 module.exports = router;

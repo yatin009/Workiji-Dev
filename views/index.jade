@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='en', ng-app='workijiApp')
     head
         // Html Page Specific
         meta(charset='utf-8')
@@ -21,7 +21,7 @@ html(lang='en')
         link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
         link(rel='apple-touch-icon', sizes='72x72', href='images/apple-touch-icon-72x72.png')
         link(rel='apple-touch-icon', sizes='114x114', href='images/apple-touch-icon-114x114.png')
-    body
+    body(ng-controller='mainController')
         // PRELOADER
         #preloader
             .clock
@@ -54,17 +54,17 @@ html(lang='en')
                                     | The Workiji mobile app manages on-demand service requests for buildings including Hotels,
                                     | Apartments, Condominium, and other type of buildings.
                         .col-lg-4.col-lg-offset-2.col-md-5.col-sm-6
-                            form#register_form(role='form', action='http://localhost:3000/register/organization', method='post')
+                            form#register_form
                                 .title.wow.flipInX(data-wow-duration='0.6s')  Register now
                                 .form-group
-                                    input#name.form-control.wow.flipInX(type='text', data-wow-delay='0.8s', data-wow-duration='0.2s', placeholder='Full name', name='name')
+                                    input#name.form-control.wow.flipInX(type='text', data-wow-delay='0.8s', data-wow-duration='0.2s', placeholder='Full name', name='name', ng-model='formData.name')
                                 .form-group
-                                    input#email.form-control.wow.flipInX(type='email', data-wow-delay='1s', data-wow-duration='0.2s', placeholder='Email Address', name='email')
+                                    input#email.form-control.wow.flipInX(type='email', data-wow-delay='1s', data-wow-duration='0.2s', placeholder='Email Address', name='email', ng-model='formData.email')
                                 .form-group
-                                    input#address.form-control.wow.flipInX(type='text', data-wow-delay='1.2s', data-wow-duration='0.2s', placeholder='Address', name='address')
+                                    input#address.form-control.wow.flipInX(type='text', data-wow-delay='1.2s', data-wow-duration='0.2s', placeholder='Address', name='address', ng-model='formData.address')
                                 .form-group
-                                    input#contactNumber.form-control.wow.flipInX(type='tel', data-wow-delay='1.4s', data-wow-duration='0.2s', placeholder='Contact Number', name='contactNumber')
-                                button#register_submit.btn.btn_start.wow.flipInX(type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Start
+                                    input#contactNumber.form-control.wow.flipInX(type='tel', data-wow-delay='1.4s', data-wow-duration='0.2s', placeholder='Contact Number', name='contactNumber', ng-model='formData.contact')
+                                button#register_submit.btn.btn_start.wow.flipInX(ng-click="createTodo()", type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Start
                 #slides(data-stellar-ratio='0.4')
                     .slides-container
                         img(src='images/1.jpg', alt='')
@@ -72,41 +72,41 @@ html(lang='en')
                         img(src='images/3.jpg', alt='')
             // INTRO END
             // SCREENSHOT BEGINS
-            section#testimonials
-                            h4 Testimonials
-                            #testimonials-slider.owl-carousel
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                        |                     he
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                    |                     he
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                        |                     he
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                    |                     he
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                    |                     he
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                    |                     he
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                    |                     he
-                                .item
-                                    .photo
-                                            img(src='images/add_event_view.png', alt='author')
-                                    |                     he
+            //section#testimonials
+            //    h4 Testimonials
+            //    #testimonials-slider.owl-carousel
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
+            //        .item
+            //            .photo
+            //                img(src='images/add_event_view.png', alt='author')
+            //            |                     he
 
             // SCREENSHOT ENDS
             // SERVICES BEGINS
@@ -226,12 +226,20 @@ html(lang='en')
                         |                Designed by WebGuru.com
             // FOOTER END
         // MODALS BEGIN
-        // subscribe modal
+        // Subscribe modal
         #modalSubscribe.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
             .modal-dialog
                 .modal-content
                     button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-                    h3.modal-title
+                    i.icon-paper-plane
+                        h3.modal-title Verify OTP
+                        br
+                        br
+                        .form-group
+                            input#otp_number(type='text', placeholder='Please enter OTP number', name='otp_number', ng-model='formData.otp_number')
+                            br
+                            br
+                            button#submit_otp(ng-click='verifyOTP()', type='submit') Verify
         // MODALS END
         // JavaScript
         script(src='javascripts/jquery-1.8.2.min.js')
@@ -244,5 +252,11 @@ html(lang='en')
         script(src='javascripts/jquery.superslides.min.js')
         script(src='javascripts/placeholders.jquery.min.js')
         script(src='javascripts/custom.js')
+        script(src="javascripts/angular.min.js")
+        script(src="javascripts/controllers/main.js")
+        script(src="javascripts/services/todos.js")
+        script(src="javascripts/core.js")
+
+
         //if lte IE 9
           script(src='scripts/respond.min.js')

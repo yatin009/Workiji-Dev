@@ -138,48 +138,80 @@ $(document).ready(function(){
 //------------------------------------------------------------------------------------
 //						REGISTRATION FORM VALIDATION'S SETTINGS
 //------------------------------------------------------------------------------------		  
-    $('#register_form').validate({
-        onfocusout: false,
-        onkeyup: false,
-        rules: {
-            name: "required",
-            email: {
-                required: true,
-                email: true
-            },
-            address: "required",
-            contactNumber: {
-     			required: true,
-      			minlength: 8
-    		}
-        },
-        errorPlacement: function(error, element) {
-            error.insertAfter(element);
-        },
-        messages: {
-            name: "What's your name?",
-            email: {
-                required: "What's your email?",
-                email: "Please, enter a valid email"
-            },
-            address: "What's your address?",
-            contactNumber: {
-      			required: "What's your contact?",
-      			minlength: jQuery.format("At least {0} characters")
-    		}
-        },
-					
-        highlight: function(element) {
-            $(element)
-            .text('').addClass('error')
-        },                    
-					
-        success: function(element) {
-            element
-            .text('').addClass('valid')
-            //Use modal popups to display messages
-            // $('#modalSubscribe .modal-title').html('<i class="icon-key">Please enter the OTP!');
-            // $('#modalSubscribe').modal('show');
-        }
-    });
+//     $('#register_form').validate({
+//         onfocusout: false,
+//         onkeyup: false,
+//         rules: {
+//             name: "required",
+//             email: {
+//                 required: true,
+//                 email: true
+//             },
+//             address: "required",
+//             contactNumber: {
+//      			required: true,
+//       			minlength: 8
+//     		}
+//         },
+//         errorPlacement: function(error, element) {
+//             error.insertAfter(element);
+//         },
+//         messages: {
+//             name: "What's your name?",
+//             email: {
+//                 required: "What's your email?",
+//                 email: "Please, enter a valid email"
+//             },
+//             address: "What's your address?",
+//             contactNumber: {
+//       			required: "What's your contact?",
+//       			minlength: jQuery.format("At least {0} characters")
+//     		}
+//         },
+//
+//         highlight: function(element) {
+//             $(element)
+//             .text('').addClass('error')
+//         },
+//
+//         success: function(element) {
+//             element
+//             .text('').addClass('valid')
+//
+//             $.ajax({
+//                 url: 'http://localhost:3000/register/organization',
+//                 type: 'POST',
+//                 data: {
+//                     // newsletter_email: $('#subscribe_email').val()
+//                 },
+//                 success: function(data) {
+//                     $('#subscribe_submit').button('reset');
+//
+//                     //Use labels to display messages
+//                     //$('.error').html(data);
+//
+//                     //Use modal popups to display messages
+//                     $('#modalSubscribe .modal-title').html('<i class="icon-envelope-letter"></i>' + data);
+//                     $('#modalSubscribe').modal('show');
+//
+//                 },
+//                 error: function() {
+//                     $('#subscribe_submit').button('reset');
+//
+//                     //Use labels to display messages
+//                     //$('.error').html('Oops! Something went wrong!');
+//
+//                     //Use modal popups to display messages
+//                     $('#modalSubscribe .modal-title').html('<i class="icon-ban"></i>Oops!<br>Something went wrong!');
+//                     $('#modalSubscribe').modal('show');
+//
+//                 }
+//             });
+//
+//
+//             //Use modal popups to display messages
+//             // $('#modalSubscribe .modal-title').html('<i class="icon-key">Please enter the OTP!');
+//             // $('#modalSubscribe').modal('show');
+//         }
+//     });
 });
