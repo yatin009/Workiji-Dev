@@ -152,7 +152,6 @@ section {
     position: relative;
     width: 100%;
     -ms-touch-action: pan-y;
-    autoWidth:true;
 }
 
 .owl-carousel .owl-wrapper {
@@ -175,6 +174,7 @@ section {
 }
 
 .owl-carousel .owl-item {
+    width: 200px;
     float: left;
 }
 

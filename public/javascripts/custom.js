@@ -26,7 +26,7 @@ $(document).ready(function(){
 //------------------------------------------------------------------------
     var owl = $("#testimonials-slider");
     owl.owlCarousel({
-        items : 5,
+        items : 7,
         itemsDesktop : [1400,4],
         itemsDesktopSmall : [1200,3], 
         itemsTablet: [900,2], 
