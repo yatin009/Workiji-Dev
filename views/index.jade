@@ -72,41 +72,61 @@ html(lang='en', ng-app='workijiApp')
                         img(src='images/3.jpg', alt='')
             // INTRO END
             // SCREENSHOT BEGINS
-            //section#testimonials
-            //    h4 Testimonials
-            //    #testimonials-slider.owl-carousel
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
-            //        .item
-            //            .photo
-            //                img(src='images/add_event_view.png', alt='author')
-            //            |                     he
+            section#testimonials
+                h4 Testimonials
+                #testimonials-slider.owl-carousel
+                    .item
+                        .photo
+                            img(src='images/screenshoot/splash_screen_view.png', alt='author')
+                        |    <br>
+                    .item
+                        .photo
+                            img(src='images/screenshoot/login_view.png', alt='author')
+                        |   <br>
+                    .item
+                        .photo
+                            img(src='images/screenshoot/signup_view.png', alt='author')
+                        |   <br>
+                    .item
+                        .photo
+                            img(src='images/screenshoot/rate_ticket.png', alt='author')
+                        |     <br>
+                    .item
+                        .photo
+                            img(src='images/screenshoot/add_event_view.png', alt='author')
+                        |   <br>
+                    .item
+                        .photo
+                            img(src='images/screenshoot/agent_dashboard.png', alt='author')
+                        |    <br>
+                    .item
+                        .photo
+                            img(src='images/screenshoot/analytics_view.png', alt='author')
+                        |   <br>
+                    .item
+                        .photo
+                            img(src='images/screenshoot/assign_contractor_view.png', alt='author')
+                        |    <br>
+                        .item
+                            .photo
+                                img(src='images/screenshoot/calendar_schedule.png', alt='author')
+                            |     <br>
+                        .item
+                            .photo
+                                img(src='images/screenshoot/filter_view.png', alt='author')
+                            |   <br>
+                        .item
+                            .photo
+                                img(src='images/screenshoot/full_ticket_view.png', alt='author')
+                            |    <br>
+                        .item
+                            .photo
+                                img(src='images/screenshoot/map_ticket_view.png', alt='author')
+                            |   <br>
+                        .item
+                            .photo
+                                img(src='images/screenshoot/quick_ticket_view.png', alt='author')
+                            |    <br>
 
             // SCREENSHOT ENDS
             // SERVICES BEGINS
@@ -231,15 +251,14 @@ html(lang='en', ng-app='workijiApp')
             .modal-dialog
                 .modal-content
                     button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-                    i.icon-paper-plane
-                        h3.modal-title Verify OTP
-                        br
-                        br
-                        .form-group
-                            input#otp_number(type='text', placeholder='Please enter OTP number', name='otp_number', ng-model='formData.otp_number')
+                    h3.modal-title
+                        i.icon-paper-plane
                             br
+                            | Verify OTP
+                        #form-group
+                            input#otp_number.form-control.wow.flipInX(type='text', placeholder='Please enter OTP number', name='otp_number', data-wow-delay='0.5s', data-wow-duration='0.2s', ng-model='formData.otp_number')
                             br
-                            button#submit_otp(ng-click='verifyOTP()', type='submit') Verify
+                        button#submit_otp.button.button2.wow.flipInX(ng-click='verifyOTP()', type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Verify
         // MODALS END
         // JavaScript
         script(src='javascripts/jquery-1.8.2.min.js')

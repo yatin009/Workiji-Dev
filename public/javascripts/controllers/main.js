@@ -14,13 +14,13 @@ angular.module('todoController', [])
                 && $scope.formData.address !== undefined && $scope.formData.contact !== undefined) {
                 // call the create function from our service (returns a promise object)
                 console.log($scope.formData)
-                OTP_GENERATE.create("{\"number\":"+$scope.formData.contact+"}")
-                // if successful creation, call our get function to get all the new todos
-                .success(function(data) {
-                        console.log('SUCCESS');
-                        // $scope.formData = {}; // clear the form so our user is ready to enter another
-                        // $scope.todos = data; // assign our new list of todos
-                });
+                // OTP_GENERATE.create("{\"number\":"+$scope.formData.contact+"}")
+                // // if successful creation, call our get function to get all the new todos
+                // .success(function(data) {
+                //         console.log('SUCCESS');
+                //         // $scope.formData = {}; // clear the form so our user is ready to enter another
+                //         // $scope.todos = data; // assign our new list of todos
+                // });
                 $('#modalSubscribe').modal('show');
             }
         };
