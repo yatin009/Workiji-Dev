@@ -48,23 +48,23 @@ html(lang='en', ng-app='workijiApp')
                     .row
                         .col-lg-6.col-md-7.col-sm-6
                             .slogan
-                                h2.wow.fadeInRight(data-wow-delay='0.6s', data-wow-duration='0.5s') Best start
-                                h3.wow.fadeInLeft(data-wow-delay='0.9s', data-wow-duration='0.5s') for your business
+                                h2.wow.fadeInRight(data-wow-delay='0.6s', data-wow-duration='0.5s') Collaborative real-time
+                                h3.wow.fadeInLeft(data-wow-delay='0.9s', data-wow-duration='0.5s') on demand Maintenance
                                 p.wow.fadeInRight(data-wow-delay='1.2s')
-                                    | The Workiji mobile app manages on-demand service requests for buildings including Hotels,
-                                    | Apartments, Condominium, and other type of buildings.
+                                    | The Workiji mobile app manages on-demand maintenance service requests for Hotels, Apartments, Condominium. Additionally Workiji also manages all external and public
+                                    | work activies including public works in a central inbox.
                         .col-lg-4.col-lg-offset-2.col-md-5.col-sm-6
                             form#register_form
                                 .title.wow.flipInX(data-wow-duration='0.6s')  Register now
                                 .form-group
                                     input#name.form-control.wow.flipInX(type='text', data-wow-delay='0.8s', data-wow-duration='0.2s', placeholder='Full name', name='name', ng-model='formData.name')
                                 .form-group
-                                    input#email.form-control.wow.flipInX(type='email', data-wow-delay='1s', data-wow-duration='0.2s', placeholder='Email Address', name='email', ng-model='formData.email')
+                                    input#email.form-control.wow.flipInX(type='email', data-wow-delay='1s', data-wow-duration='0.2s', placeholder='Email', name='email', ng-model='formData.email')
                                 .form-group
                                     input#address.form-control.wow.flipInX(type='text', data-wow-delay='1.2s', data-wow-duration='0.2s', placeholder='Address', name='address', ng-model='formData.address')
                                 .form-group
                                     input#contactNumber.form-control.wow.flipInX(type='tel', data-wow-delay='1.4s', data-wow-duration='0.2s', placeholder='Contact Number', name='contactNumber', ng-model='formData.contact')
-                                button#register_submit.btn.btn_start.wow.flipInX(ng-click="createTodo()", type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Start
+                                button#register_submit.btn.btn_start.wow.flipInX(ng-click="createTodo()", type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Register
                 #slides(data-stellar-ratio='0.4')
                     .slides-container
                         img(src='images/landing/landing_image_1.jpg', alt='')
@@ -150,10 +150,7 @@ html(lang='en', ng-app='workijiApp')
                             h4 Service Request(SR) Inbox Queue
                             ul(type='disc')
                                 li(type='disc') Use Mobile Phone to snap image of maintenance issues &amp; SMS to a central phone number
-                                li(type='disc') Deliver SMS SR to Central Inbox
-                                li(type='disc') Building Agent Central Inbox
-                                li(type='disc') Pull to Refresh Notification for SR that is being worked upon
-                                li(type='disc') Filter SR status
+                                li(type='disc') SMS SR to delivered Real-time to Central Inbox managed by an Agent
 
                         .col-md-4.service
                             i.icon-badge
@@ -167,15 +164,15 @@ html(lang='en', ng-app='workijiApp')
                             h4 Map View for all SR and Work Orders
                             ul(type='disc')
                                 li(type='disc') Geocoding of SR &amp; Work Orders
-                                li(type='disc') Navigate PINs on map for all SR &amp; Work Orders
+                                li(type='disc') Navigate all SR &amp; Work Orders on Map
                         .clearfix.visible-lg.visible-md
                         .col-md-4.service
                             i.icon-users
                             h4 Contractor Management
                             ul(type='disc')
                                 li(type='disc') Manage all SR assigned to Contractors
-                                li(type='disc') Keep track of Work Orders
-                                li(type='disc') Track progress of Contractors $spend
+                                li(type='disc') Manage Work Orders
+                                li(type='disc') Manage Contractors invoices
                         .col-md-4.service
                             i.icon-wrench
                             h4 Work Management
@@ -187,7 +184,7 @@ html(lang='en', ng-app='workijiApp')
                             i.icon-emoticon-smile
                             h4 User Management
                             ul(type='disc')
-                                li(type='disc') Authenticate Users with Firebase Authentication
+                                li(type='disc') Authenticate Users with Cloud Backend Service
                                 li(type='disc') Manage all Users for an Organization and for Buildings
                                 li(type='disc') Manage Contractors assigned to Organization
                         .clearfix.visible-lg.visible-md
