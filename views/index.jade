@@ -255,10 +255,11 @@ html(lang='en', ng-app='workijiApp')
                         i.icon-paper-plane
                             br
                             | Verify OTP
-                        #form-group
-                            input#otp_number.form-control.wow.flipInX(type='text', placeholder='Please enter OTP number', name='otp_number', data-wow-delay='0.5s', data-wow-duration='0.2s', ng-model='formData.otp_number')
-                            br
-                        button#submit_otp.button.button2.wow.flipInX(ng-click='verifyOTP()', type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Verify
+                        form#form_otp
+                            #input-group
+                                input#otp_number.form-control.wow.flipInX(type='text', placeholder='Please enter OTP number', name='otp_number', data-wow-delay='0.5s', data-wow-duration='0.2s', ng-model='formData.otp_number')
+                                br
+                                button#submit_otp.button.button2.wow.flipInX(ng-click='verifyOTP()', type='submit', data-wow-delay='1.6s', data-wow-duration='0.2s') Verify
         // MODALS END
         // JavaScript
         script(src='javascripts/jquery-1.8.2.min.js')
