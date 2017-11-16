@@ -5,29 +5,29 @@
  * Created by yatin on 21/05/17.
  */
 
-var RequesterData = require('../models/requesterData.js');
-var TicketTimeline = require('../models/ticketTimeline.js');
+let RequesterData = require('../models/requesterData.js');
+let TicketTimeline = require('../models/ticketTimeline.js');
 
-function TwilioTicket(message, date, id, msg, lat, lng, address, requesterNumber, city, imageUrl) {
-    this.agentId = "4HyK2VKuffQvoY5cih8pM7NjGMr1";
-    this.dateTime = date; //tweet.created_at; //Add dateTime
-    this.issueImageName = imageUrl; //tweet.media[0].media_url; // Add image link
-    this.lat = lat;//43.7854;
-    this.lng = lng;//-79.2265;
-    this.priority = "HIGH";
-    this.requestorId = requesterNumber;
-    this.searchKeyword = "";
-    this.status = "Incoming";
-    this.ticketKey = "";
-    this.ticketNumber = "";
-    this.requester = new RequesterData(msg, address, city)
-    this.ticketTimelines = ticketTimeline;
-    // null parameters
-    this.approverId = null;
-    this.contractorId = null;
-    this.messageId = id; //tweet.id_str;
-    this.issue = msg; //tweet.text;
-}
+// function TwilioTicket(message, date, id, msg, lat, lng, address, requesterNumber, city, imageUrl) {
+//     this.agentId = "4HyK2VKuffQvoY5cih8pM7NjGMr1";
+//     this.dateTime = date; //tweet.created_at; //Add dateTime
+//     this.issueImageName = imageUrl; //tweet.media[0].media_url; // Add image link
+//     this.lat = lat;//43.7854;
+//     this.lng = lng;//-79.2265;
+//     this.priority = "HIGH";
+//     this.requestorId = requesterNumber;
+//     this.searchKeyword = "";
+//     this.status = "Incoming";
+//     this.ticketKey = "";
+//     this.ticketNumber = "";
+//     this.requester = new RequesterData(msg, address, city)
+//     this.ticketTimelines = ticketTimeline;
+//     // null parameters
+//     this.approverId = null;
+//     this.contractorId = null;
+//     this.messageId = id; //tweet.id_str;
+//     this.issue = msg; //tweet.text;
+// }
 
 function TwilioTicket(message, date, lat, lng){
     this.agentId = message.buildingUser.agentId;//"4HyK2VKuffQvoY5cih8pM7NjGMr1";
@@ -62,15 +62,6 @@ function getTimelineArray(date){
         "6": new TicketTimeline("WorkRated", "PENDING", null)
     }
 }
-// var ticketTimeline = {
-//     "0": new TicketTimeline("Incoming", "COMPLETED"),
-//     "1": new TicketTimeline("Assigned", "PENDING", null),
-//     "2": new TicketTimeline("Approver Assigned", "PENDING", null),
-//     "3": new TicketTimeline("Approved", "PENDING", null),
-//     "4": new TicketTimeline("Scheduled", "PENDING", null),
-//     "5": new TicketTimeline("Work Completed", "PENDING", null),
-//     "6": new TicketTimeline("WorkRated", "PENDING", null)
-// }
 
 TwilioTicket.prototype.toJSONString = function () {
     return JSON.stringify({

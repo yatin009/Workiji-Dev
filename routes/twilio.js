@@ -13,6 +13,7 @@ let async = require('async');
 let NodeGeocoder = require('node-geocoder');
 const dateFormat = require('dateformat');
 let Organization = require('../models/organization.js');
+let HELPERSMS = require('../helper/helperSMS.js');
 
 let options = {
     provider: 'google',
@@ -32,21 +33,7 @@ const database = admin.database();
 
 router.post("/create_message", function (req, res) {
     console.log(req.body);
-    var sms = req.body;
-    client.messages.create({
-        body: sms.body,
-        to: sms.to,  // Text this number
-        from: '+16479302246' // From a valid Twilio number
-    }, function (err, message) {
-        if (!err) {
-            res.status(200)
-            res.send('Message Sent');
-        } else {
-            res.status(err.status);
-            res.send(err)
-        }
-    });
-    //(message) => console.log(message.sid)
+    HELPERSMS.createSMS(req.body, res)
 });
 
 router.get("/get_messages", function (req, res) {
@@ -211,15 +198,15 @@ function createTicket(fTicketMessage, res) {
 function pushTicket(ticket) {
     let newPostKey = database.ref("ticketing").push().key;
     ticket.ticketKey = newPostKey;
-    sendReply(ticket.requestorId, "", "");
+    sendReply(ticket.requestorId, ticket.ticketNumber);
     admin.database().ref("ticketing/" + newPostKey).set(
         ticket
     );
 }
 
-function sendReply(to, from, body) {
+function sendReply(to, ticketNumber) {
     client.messages.create({
-        body: 'Thank you. A ticket has been created for your reported issue.',
+        body: 'Thank you. A ticket has been created for your reported issue. Your ticket number is '+ticketNumber,
         to: to,  // Text this number
         from: '+16479302246' // From a valid Twilio number
     });

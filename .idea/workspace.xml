@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="165495cf-56de-4acb-90b6-aa12e5b2d8fa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/helperFunctions.js" afterPath="$PROJECT_DIR$/helper/helperFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/twilioTicket.js" afterPath="$PROJECT_DIR$/models/twilioTicket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/register.js" afterPath="$PROJECT_DIR$/routes/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/twilio.js" afterPath="$PROJECT_DIR$/routes/twilio.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,305 +20,159 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="59" column="97" lean-forward="false" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+            <state relative-caret-position="153">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#420#501#0" expanded="false" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#a#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ul#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#0;n#ul#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#1;n#ul#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#2;n#ul#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#3;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#4;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#5;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#6;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#7;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#8;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#8;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#9;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#9;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#10;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#10;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#11;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#11;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#12;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#12;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#13;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#13;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#14;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#14;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#15;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#15;n#div#0;n#section#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#form#0;n#div#1;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#button#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ul#0;n#div#2;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#1;n#ul#0;n#div#2;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#li#2;n#ul#0;n#div#2;n#div#0;n#div#0;n#section#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#a#0;n#div#0;n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#p#0;n#div#0;n#footer#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#h3#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#i#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#13;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#16030#16090#0" expanded="false" />
+                <element signature="e#0#40#0" expanded="false" />
+                <element signature="e#603#693#0" expanded="false" />
+                <element signature="e#744#837#0" expanded="false" />
+                <element signature="n#!!block;n#registerContractorInFirebase#0" expanded="false" />
+                <element signature="e#925#1142#0" expanded="false" />
+                <element signature="e#1170#1389#0" expanded="false" />
+                <element signature="e#1422#1600#0" expanded="false" />
+                <element signature="n#!!block;n#createContractorInFirebase#0" expanded="false" />
+                <element signature="e#2090#2155#0" expanded="false" />
+                <element signature="n#!!block;n#registerUserInFirebase#0" expanded="false" />
+                <element signature="e#2230#2421#0" expanded="false" />
+                <element signature="e#2449#2779#0" expanded="false" />
+                <element signature="e#2632#2702#0" expanded="false" />
+                <element signature="e#2706#2773#0" expanded="false" />
+                <element signature="e#2812#2990#0" expanded="false" />
+                <element signature="n#!!block;n#createCompanyInFirebase#0" expanded="false" />
+                <element signature="n#!!block;n#createUserInFirebase#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <file leaf-file-name="twilio.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/twilio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="581" column="0" lean-forward="false" selection-start-line="581" selection-start-column="0" selection-end-line="581" selection-end-column="0" />
+            <state relative-caret-position="-150">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="e#160#366#0" expanded="false" />
-                <element signature="e#373#500#0" expanded="false" />
-                <element signature="e#568#614#0" expanded="false" />
-                <element signature="e#619#665#0" expanded="false" />
-                <element signature="e#721#767#0" expanded="false" />
-                <element signature="e#840#898#0" expanded="false" />
-                <element signature="e#906#931#0" expanded="false" />
-                <element signature="e#941#1028#0" expanded="false" />
-                <element signature="e#1090#1110#0" expanded="false" />
-                <element signature="e#1162#1240#0" expanded="false" />
-                <element signature="e#1291#1342#0" expanded="false" />
-                <element signature="e#1360#1391#0" expanded="false" />
-                <element signature="e#1393#1602#0" expanded="false" />
-                <element signature="e#1610#1659#0" expanded="false" />
-                <element signature="e#1676#1865#0" expanded="false" />
-                <element signature="e#1880#1898#0" expanded="false" />
-                <element signature="e#1917#2003#0" expanded="false" />
-                <element signature="e#2017#2040#0" expanded="false" />
-                <element signature="e#2064#2123#0" expanded="false" />
-                <element signature="e#2132#2227#0" expanded="false" />
-                <element signature="e#2229#2437#0" expanded="false" />
-                <element signature="e#2472#2589#0" expanded="false" />
-                <element signature="e#2605#2697#0" expanded="false" />
-                <element signature="e#2726#2823#0" expanded="false" />
-                <element signature="e#2858#2907#0" expanded="false" />
-                <element signature="e#2953#3186#0" expanded="false" />
-                <element signature="e#3212#3250#0" expanded="false" />
-                <element signature="e#3308#3332#0" expanded="false" />
-                <element signature="e#3348#3541#0" expanded="false" />
-                <element signature="e#3553#3607#0" expanded="false" />
-                <element signature="e#3661#3908#0" expanded="false" />
-                <element signature="e#3926#4034#0" expanded="false" />
-                <element signature="e#4062#4196#0" expanded="false" />
-                <element signature="e#4229#4347#0" expanded="false" />
-                <element signature="e#4387#4412#0" expanded="false" />
-                <element signature="e#4414#4615#0" expanded="false" />
-                <element signature="e#4628#4781#0" expanded="false" />
-                <element signature="e#4801#4974#0" expanded="false" />
-                <element signature="e#5005#5423#0" expanded="false" />
-                <element signature="e#5454#5872#0" expanded="false" />
-                <element signature="e#5874#6021#0" expanded="false" />
-                <element signature="e#5911#5959#0" expanded="false" />
-                <element signature="e#5969#6019#0" expanded="false" />
-                <element signature="e#6023#6146#0" expanded="false" />
-                <element signature="e#6052#6092#0" expanded="false" />
-                <element signature="e#6102#6144#0" expanded="false" />
-                <element signature="e#6148#6346#0" expanded="false" />
-                <element signature="e#6355#6459#0" expanded="false" />
-                <element signature="e#6467#6487#0" expanded="false" />
-                <element signature="e#6498#6541#0" expanded="false" />
-                <element signature="e#6555#6630#0" expanded="false" />
-                <element signature="e#6656#6679#0" expanded="false" />
-                <element signature="e#6695#6885#0" expanded="false" />
-                <element signature="e#6908#7061#0" expanded="false" />
-                <element signature="e#7090#7205#0" expanded="false" />
-                <element signature="e#7241#7269#0" expanded="false" />
-                <element signature="e#7303#7331#0" expanded="false" />
-                <element signature="e#7365#7393#0" expanded="false" />
-                <element signature="e#7426#7454#0" expanded="false" />
-                <element signature="e#7489#7517#0" expanded="false" />
-                <element signature="e#7552#7580#0" expanded="false" />
-                <element signature="e#7614#7642#0" expanded="false" />
-                <element signature="e#7674#7702#0" expanded="false" />
-                <element signature="e#7735#7763#0" expanded="false" />
-                <element signature="e#7794#7822#0" expanded="false" />
-                <element signature="e#7854#7879#0" expanded="false" />
-                <element signature="e#7911#7939#0" expanded="false" />
-                <element signature="e#7969#7994#0" expanded="false" />
-                <element signature="e#8008#8263#0" expanded="false" />
-                <element signature="e#8283#8332#0" expanded="false" />
-                <element signature="e#8334#8531#0" expanded="false" />
-                <element signature="e#8540#8724#0" expanded="false" />
-                <element signature="e#8744#8822#0" expanded="false" />
-                <element signature="e#8839#8920#0" expanded="false" />
-                <element signature="e#8937#8988#0" expanded="false" />
-                <element signature="e#9008#9064#0" expanded="false" />
-                <element signature="e#9178#9223#0" expanded="false" />
-                <element signature="e#9244#9360#0" expanded="false" />
-                <element signature="e#9376#9556#0" expanded="false" />
-                <element signature="e#9579#9617#0" expanded="false" />
-                <element signature="e#9631#9675#0" expanded="false" />
-                <element signature="e#9695#9891#0" expanded="false" />
-                <element signature="e#9917#10145#0" expanded="false" />
-                <element signature="e#10171#10223#0" expanded="false" />
-                <element signature="e#10249#10290#0" expanded="false" />
-                <element signature="e#10292#10492#0" expanded="false" />
-                <element signature="e#10504#10553#0" expanded="false" />
-                <element signature="e#10574#10608#0" expanded="false" />
-                <element signature="e#10631#10721#0" expanded="false" />
-                <element signature="e#10814#10842#0" expanded="false" />
-                <element signature="e#10844#11044#0" expanded="false" />
-                <element signature="e#11056#11136#0" expanded="false" />
-                <element signature="e#11151#11331#0" expanded="false" />
-                <element signature="e#11350#11377#0" expanded="false" />
-                <element signature="e#11399#11453#0" expanded="false" />
-                <element signature="e#11482#11728#0" expanded="false" />
-                <element signature="e#11747#11984#0" expanded="false" />
-                <element signature="e#12009#12034#0" expanded="false" />
-                <element signature="e#12036#12232#0" expanded="false" />
-                <element signature="e#12242#12269#0" expanded="false" />
-                <element signature="e#12278#12415#0" expanded="false" />
-                <element signature="e#12439#12620#0" expanded="false" />
-                <element signature="e#12651#12879#0" expanded="false" />
-                <element signature="e#12920#13019#0" expanded="false" />
-                <element signature="e#13040#13079#0" expanded="false" />
-                <element signature="e#13081#13284#0" expanded="false" />
-                <element signature="e#13300#13399#0" expanded="false" />
-                <element signature="e#13418#13440#0" expanded="false" />
-                <element signature="e#13469#13529#0" expanded="false" />
-                <element signature="e#14515#14686#0" expanded="false" />
-                <element signature="e#14688#14889#0" expanded="false" />
-                <element signature="e#14904#15004#0" expanded="false" />
-                <element signature="e#15022#15044#0" expanded="false" />
-                <element signature="e#15072#15113#0" expanded="false" />
-                <element signature="e#15148#15302#0" expanded="false" />
-                <element signature="e#15345#15552#0" expanded="false" />
-                <element signature="e#15594#15805#0" expanded="false" />
-                <element signature="e#15807#16007#0" expanded="false" />
-                <element signature="e#16018#16062#0" expanded="false" />
-                <element signature="e#16078#16101#0" expanded="false" />
-                <element signature="e#16123#16237#0" expanded="false" />
-                <element signature="e#16271#16321#0" expanded="false" />
-                <element signature="e#16354#16382#0" expanded="false" />
-                <element signature="e#16406#16426#0" expanded="false" />
-                <element signature="e#16440#16467#0" expanded="false" />
-                <element signature="e#16487#16507#0" expanded="false" />
-                <element signature="e#16533#16560#0" expanded="false" />
-                <element signature="e#16585#16612#0" expanded="false" />
-                <element signature="e#16630#16657#0" expanded="false" />
-                <element signature="e#16689#16717#0" expanded="false" />
-                <element signature="e#16740#16930#0" expanded="false" />
-                <element signature="e#16954#17061#0" expanded="false" />
-                <element signature="e#17091#17119#0" expanded="false" />
-                <element signature="e#17149#17218#0" expanded="false" />
-                <element signature="e#17220#17421#0" expanded="false" />
-                <element signature="e#17433#17460#0" expanded="false" />
-                <element signature="e#17486#17524#0" expanded="false" />
-                <element signature="e#17540#17730#0" expanded="false" />
-                <element signature="e#17740#18070#0" expanded="false" />
-                <element signature="e#18087#18176#0" expanded="false" />
-                <element signature="e#18178#18377#0" expanded="false" />
-                <element signature="e#18386#18496#0" expanded="false" />
-                <element signature="e#18511#18531#0" expanded="false" />
-                <element signature="e#18550#18618#0" expanded="false" />
-                <element signature="e#18620#18828#0" expanded="false" />
-                <element signature="e#18830#19688#0" expanded="false" />
-                <element signature="e#18871#18903#0" expanded="false" />
-                <element signature="e#18919#18958#0" expanded="false" />
-                <element signature="e#18974#19014#0" expanded="false" />
-                <element signature="e#19033#19245#0" expanded="false" />
-                <element signature="e#19267#19297#0" expanded="false" />
-                <element signature="e#19317#19373#0" expanded="false" />
-                <element signature="e#19472#19615#0" expanded="false" />
-                <element signature="e#19653#19686#0" expanded="false" />
-                <element signature="e#19690#20301#0" expanded="false" />
-                <element signature="e#19728#19763#0" expanded="false" />
-                <element signature="e#19784#19810#0" expanded="false" />
-                <element signature="e#19834#19874#0" expanded="false" />
-                <element signature="e#19897#19928#0" expanded="false" />
-                <element signature="e#19953#19995#0" expanded="false" />
-                <element signature="e#20022#20110#0" expanded="false" />
-                <element signature="e#20136#20236#0" expanded="false" />
-                <element signature="e#20269#20299#0" expanded="false" />
-                <element signature="e#20303#20494#0" expanded="false" />
-                <element signature="e#20343#20376#0" expanded="false" />
-                <element signature="e#20398#20428#0" expanded="false" />
-                <element signature="e#20452#20492#0" expanded="false" />
-                <element signature="e#20496#20700#0" expanded="false" />
-                <element signature="e#20702#21100#0" expanded="false" />
-                <element signature="e#20785#20839#0" expanded="false" />
-                <element signature="e#20862#20921#0" expanded="false" />
-                <element signature="e#21000#21098#0" expanded="false" />
+                <element signature="e#0#40#0" expanded="false" />
+                <element signature="e#562#722#0" expanded="false" />
+                <element signature="e#1231#1468#0" expanded="false" />
+                <element signature="e#1279#1465#0" expanded="false" />
+                <element signature="e#1314#1372#0" expanded="false" />
+                <element signature="e#1378#1459#0" expanded="false" />
+                <element signature="e#1527#1762#0" expanded="false" />
+                <element signature="e#1574#1759#0" expanded="false" />
+                <element signature="e#1609#1666#0" expanded="false" />
+                <element signature="e#1672#1753#0" expanded="false" />
+                <element signature="n#!!block;n#getAllMessages#0" expanded="false" />
+                <element signature="e#1890#2270#0" expanded="false" />
+                <element signature="e#1910#2182#0" expanded="false" />
+                <element signature="e#1956#2135#0" expanded="false" />
+                <element signature="e#2031#2121#0" expanded="false" />
+                <element signature="e#2188#2264#0" expanded="false" />
+                <element signature="n#!!block;n#filterValidMessage#0" expanded="false" />
+                <element signature="e#2557#3192#0" expanded="false" />
+                <element signature="e#2605#2993#0" expanded="false" />
+                <element signature="e#2700#2981#0" expanded="false" />
+                <element signature="e#2770#2892#0" expanded="false" />
+                <element signature="e#2898#2967#0" expanded="false" />
+                <element signature="e#3034#3099#0" expanded="false" />
+                <element signature="e#3105#3186#0" expanded="false" />
+                <element signature="e#3217#3346#0" expanded="false" />
+                <element signature="n#!!block;n#checkDBForOldMessage#0" expanded="false" />
+                <element signature="e#3650#4520#0" expanded="false" />
+                <element signature="e#3698#3868#0" expanded="false" />
+                <element signature="e#3786#3858#0" expanded="false" />
+                <element signature="e#3920#4268#0" expanded="false" />
+                <element signature="e#3986#4258#0" expanded="false" />
+                <element signature="e#4035#4114#0" expanded="false" />
+                <element signature="e#4120#4244#0" expanded="false" />
+                <element signature="e#4344#4427#0" expanded="false" />
+                <element signature="e#4433#4514#0" expanded="false" />
+                <element signature="e#4545#4674#0" expanded="false" />
+                <element signature="n#!!block;n#downloadMediaUri#0" expanded="false" />
+                <element signature="e#4807#5121#0" expanded="false" />
+                <element signature="e#4878#5113#0" expanded="false" />
+                <element signature="e#4901#4954#0" expanded="false" />
+                <element signature="e#4997#5101#0" expanded="false" />
+                <element signature="e#5138#5413#0" expanded="false" />
+                <element signature="e#5157#5264#0" expanded="false" />
+                <element signature="n#!!block;n#parseImageUri#0" expanded="false" />
+                <element signature="e#6021#6127#0" expanded="false" />
+                <element signature="e#6492#6541#0" expanded="false" />
+                <element signature="n#!!block;n#deleteAllMessages#0" expanded="false" />
+                <element signature="e#7294#7492#0" expanded="false" />
+                <element signature="e#7359#7445#0" expanded="false" />
+                <element signature="e#7629#8328#0" expanded="false" />
+                <element signature="e#7707#7774#0" expanded="false" />
+                <element signature="e#7983#8116#0" expanded="false" />
+                <element signature="e#8142#8324#0" expanded="false" />
+                <element signature="e#8162#8239#0" expanded="false" />
+                <element signature="e#8245#8318#0" expanded="false" />
+                <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
+                <element signature="n#!!block;n#insertIntoFirebase#0" expanded="false" />
+                <element signature="e#8706#8792#0" expanded="false" />
+                <element signature="n#!!block;n#verifyOTP#0" expanded="false" />
+                <element signature="e#8948#9553#0" expanded="false" />
+                <element signature="e#8996#9226#0" expanded="false" />
+                <element signature="e#9123#9216#0" expanded="false" />
+                <element signature="e#9249#9461#0" expanded="false" />
+                <element signature="e#9391#9410#0" expanded="false" />
+                <element signature="e#9465#9547#0" expanded="false" />
+                <element signature="e#9578#9707#0" expanded="false" />
+                <element signature="n#!!block;n#removeOTPObjectFromFirebase#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todos.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/services/todos.js">
+      <file leaf-file-name="helperFunctions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/helper/helperFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="196">
+              <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+                <element signature="e#544#625#0" expanded="false" />
+                <element signature="e#772#862#0" expanded="false" />
+                <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
+                <element signature="e#2692#2808#0" expanded="false" />
+                <element signature="e#2866#3052#0" expanded="false" />
+                <element signature="e#2986#3038#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/main.js">
+      <file leaf-file-name="sms.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/sms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding>
-                <element signature="e#2467#2543#0" expanded="false" />
-                <element signature="e#2629#2895#0" expanded="false" />
+                <element signature="n#!!doc;n#SMS#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/custom.js">
+      <file leaf-file-name="helperSMS.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/helperSMS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+            <state relative-caret-position="375">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
-                <element signature="e#4581#5626#0" expanded="false" />
+                <element signature="e#0#40#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -333,8 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subscribe_submit</find>
-      <find>action</find>
       <find>body</find>
       <find>address</find>
       <find>email</find>
@@ -360,9 +215,11 @@
       <find>owlCarousel</find>
       <find>a</find>
       <find>h3</find>
-      <find>h4</find>
       <find>pointer</find>
       <find>learn more</find>
+      <find>h4</find>
+      <find>ticket</find>
+      <find>Error creating Agent in firebase authentication</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -383,13 +240,16 @@
         <option value="$PROJECT_DIR$/models/otp.js" />
         <option value="$PROJECT_DIR$/public/javascripts/core.js" />
         <option value="$PROJECT_DIR$/public/javascripts/services/todos.js" />
-        <option value="$PROJECT_DIR$/routes/register.js" />
-        <option value="$PROJECT_DIR$/helper/helperFunctions.js" />
-        <option value="$PROJECT_DIR$/routes/twilio.js" />
         <option value="$PROJECT_DIR$/public/javascripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/public/javascripts/custom.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/routes/register.js" />
+        <option value="$PROJECT_DIR$/routes/twilio.js" />
+        <option value="$PROJECT_DIR$/models/twilioTicket.js" />
+        <option value="$PROJECT_DIR$/models/sms.js" />
+        <option value="$PROJECT_DIR$/helper/helperSMS.js" />
+        <option value="$PROJECT_DIR$/helper/helperFunctions.js" />
       </list>
     </option>
   </component>
@@ -473,8 +333,18 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
+              <option name="myItemId" value="Workiji" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Workiji" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,25 +358,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Workiji" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Workiji" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="helper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -643,28 +495,28 @@
       <workItem from="1509649016083" duration="17094000" />
       <workItem from="1509813508315" duration="14686000" />
       <workItem from="1510090474033" duration="910000" />
-      <workItem from="1510108715014" duration="730000" />
+      <workItem from="1510108715014" duration="2997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55582000" />
+    <option name="totallyTimeSpent" value="57849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -684,42 +536,58 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/register.js</url>
-          <line>18</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/twilio.js</url>
-          <line>240</line>
+          <line>227</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="178" column="18" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/building.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/firebase.js" />
     <entry file="file://$PROJECT_DIR$/QikDispatch-Dev-549fe5876000.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -849,20 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="22" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/otp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/subscribe.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -909,124 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#848#952#0" expanded="false" />
-            <element signature="e#1109#1151#0" expanded="false" />
-            <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
-            <element signature="n#!!block;n#getAllOrganizationCode#0" expanded="false" />
-            <element signature="e#1662#1913#0" expanded="false" />
-            <element signature="e#1710#1791#0" expanded="false" />
-            <element signature="e#1938#2028#0" expanded="false" />
-            <element signature="n#!!block;n#createOrganizationInFirebase#0" expanded="false" />
-            <element signature="n#!!block;n#registerAgentInFirebase#0" expanded="false" />
-            <element signature="e#2414#2626#0" expanded="false" />
-            <element signature="e#2654#2870#0" expanded="false" />
-            <element signature="e#2903#3076#0" expanded="false" />
-            <element signature="n#!!block;n#createAgentInFirebase#0" expanded="false" />
-            <element signature="e#3406#3499#0" expanded="false" />
-            <element signature="n#!!block;n#registerContractorInFirebase#0" expanded="false" />
-            <element signature="e#3587#3804#0" expanded="false" />
-            <element signature="e#3832#4051#0" expanded="false" />
-            <element signature="e#4084#4262#0" expanded="false" />
-            <element signature="n#!!block;n#createContractorInFirebase#0" expanded="false" />
-            <element signature="e#4752#4817#0" expanded="false" />
-            <element signature="n#!!block;n#registerUserInFirebase#0" expanded="false" />
-            <element signature="e#4892#5083#0" expanded="false" />
-            <element signature="e#5111#5441#0" expanded="false" />
-            <element signature="e#5294#5364#0" expanded="false" />
-            <element signature="e#5368#5435#0" expanded="false" />
-            <element signature="e#5474#5652#0" expanded="false" />
-            <element signature="n#!!block;n#createCompanyInFirebase#0" expanded="false" />
-            <element signature="n#!!block;n#createUserInFirebase#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/helperFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/twilio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#511#671#0" expanded="false" />
-            <element signature="e#1059#1526#0" expanded="false" />
-            <element signature="e#1139#1270#0" expanded="false" />
-            <element signature="e#1296#1478#0" expanded="false" />
-            <element signature="e#1316#1393#0" expanded="false" />
-            <element signature="e#1399#1472#0" expanded="false" />
-            <element signature="e#1578#1815#0" expanded="false" />
-            <element signature="e#1626#1812#0" expanded="false" />
-            <element signature="e#1661#1719#0" expanded="false" />
-            <element signature="e#1725#1806#0" expanded="false" />
-            <element signature="e#1874#2109#0" expanded="false" />
-            <element signature="e#1921#2106#0" expanded="false" />
-            <element signature="e#1956#2013#0" expanded="false" />
-            <element signature="e#2019#2100#0" expanded="false" />
-            <element signature="n#!!block;n#getAllMessages#0" expanded="false" />
-            <element signature="e#2237#2617#0" expanded="false" />
-            <element signature="e#2257#2529#0" expanded="false" />
-            <element signature="e#2303#2482#0" expanded="false" />
-            <element signature="e#2378#2468#0" expanded="false" />
-            <element signature="e#2535#2611#0" expanded="false" />
-            <element signature="n#!!block;n#filterValidMessage#0" expanded="false" />
-            <element signature="e#2904#3539#0" expanded="false" />
-            <element signature="e#2952#3340#0" expanded="false" />
-            <element signature="e#3047#3328#0" expanded="false" />
-            <element signature="e#3117#3239#0" expanded="false" />
-            <element signature="e#3245#3314#0" expanded="false" />
-            <element signature="e#3381#3446#0" expanded="false" />
-            <element signature="e#3452#3533#0" expanded="false" />
-            <element signature="e#3564#3693#0" expanded="false" />
-            <element signature="n#!!block;n#checkDBForOldMessage#0" expanded="false" />
-            <element signature="e#3997#4867#0" expanded="false" />
-            <element signature="e#4045#4215#0" expanded="false" />
-            <element signature="e#4133#4205#0" expanded="false" />
-            <element signature="e#4267#4615#0" expanded="false" />
-            <element signature="e#4333#4605#0" expanded="false" />
-            <element signature="e#4382#4461#0" expanded="false" />
-            <element signature="e#4467#4591#0" expanded="false" />
-            <element signature="e#4691#4774#0" expanded="false" />
-            <element signature="e#4780#4861#0" expanded="false" />
-            <element signature="e#4892#5021#0" expanded="false" />
-            <element signature="n#!!block;n#downloadMediaUri#0" expanded="false" />
-            <element signature="e#5154#5468#0" expanded="false" />
-            <element signature="e#5225#5460#0" expanded="false" />
-            <element signature="e#5248#5301#0" expanded="false" />
-            <element signature="e#5344#5448#0" expanded="false" />
-            <element signature="e#5485#5760#0" expanded="false" />
-            <element signature="e#5504#5611#0" expanded="false" />
-            <element signature="n#!!block;n#parseImageUri#0" expanded="false" />
-            <element signature="n#!!block;n#createTicket#0" expanded="false" />
-            <element signature="e#5985#6896#0" expanded="false" />
-            <element signature="e#6300#6803#0" expanded="false" />
-            <element signature="e#6368#6474#0" expanded="false" />
-            <element signature="e#6839#6888#0" expanded="false" />
-            <element signature="n#!!block;n#pushTicket#0" expanded="false" />
-            <element signature="n#!!block;n#sendReply#0" expanded="false" />
-            <element signature="e#7312#7494#0" expanded="false" />
-            <element signature="n#!!block;n#deleteAllMessages#0" expanded="false" />
-            <element signature="e#7590#7788#0" expanded="false" />
-            <element signature="e#7655#7741#0" expanded="false" />
-            <element signature="e#8279#8412#0" expanded="false" />
-            <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
-            <element signature="n#!!block;n#insertIntoFirebase#0" expanded="false" />
-            <element signature="n#!!block;n#removeOTPObjectFromFirebase#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1347,6 +1083,170 @@
             <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#13;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#16030#16090#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/otp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#603#693#0" expanded="false" />
+            <element signature="e#744#837#0" expanded="false" />
+            <element signature="n#!!block;n#registerContractorInFirebase#0" expanded="false" />
+            <element signature="e#925#1142#0" expanded="false" />
+            <element signature="e#1170#1389#0" expanded="false" />
+            <element signature="e#1422#1600#0" expanded="false" />
+            <element signature="n#!!block;n#createContractorInFirebase#0" expanded="false" />
+            <element signature="e#2090#2155#0" expanded="false" />
+            <element signature="n#!!block;n#registerUserInFirebase#0" expanded="false" />
+            <element signature="e#2230#2421#0" expanded="false" />
+            <element signature="e#2449#2779#0" expanded="false" />
+            <element signature="e#2632#2702#0" expanded="false" />
+            <element signature="e#2706#2773#0" expanded="false" />
+            <element signature="e#2812#2990#0" expanded="false" />
+            <element signature="n#!!block;n#createCompanyInFirebase#0" expanded="false" />
+            <element signature="n#!!block;n#createUserInFirebase#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/twilioTicket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/twilio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#562#722#0" expanded="false" />
+            <element signature="e#1231#1468#0" expanded="false" />
+            <element signature="e#1279#1465#0" expanded="false" />
+            <element signature="e#1314#1372#0" expanded="false" />
+            <element signature="e#1378#1459#0" expanded="false" />
+            <element signature="e#1527#1762#0" expanded="false" />
+            <element signature="e#1574#1759#0" expanded="false" />
+            <element signature="e#1609#1666#0" expanded="false" />
+            <element signature="e#1672#1753#0" expanded="false" />
+            <element signature="n#!!block;n#getAllMessages#0" expanded="false" />
+            <element signature="e#1890#2270#0" expanded="false" />
+            <element signature="e#1910#2182#0" expanded="false" />
+            <element signature="e#1956#2135#0" expanded="false" />
+            <element signature="e#2031#2121#0" expanded="false" />
+            <element signature="e#2188#2264#0" expanded="false" />
+            <element signature="n#!!block;n#filterValidMessage#0" expanded="false" />
+            <element signature="e#2557#3192#0" expanded="false" />
+            <element signature="e#2605#2993#0" expanded="false" />
+            <element signature="e#2700#2981#0" expanded="false" />
+            <element signature="e#2770#2892#0" expanded="false" />
+            <element signature="e#2898#2967#0" expanded="false" />
+            <element signature="e#3034#3099#0" expanded="false" />
+            <element signature="e#3105#3186#0" expanded="false" />
+            <element signature="e#3217#3346#0" expanded="false" />
+            <element signature="n#!!block;n#checkDBForOldMessage#0" expanded="false" />
+            <element signature="e#3650#4520#0" expanded="false" />
+            <element signature="e#3698#3868#0" expanded="false" />
+            <element signature="e#3786#3858#0" expanded="false" />
+            <element signature="e#3920#4268#0" expanded="false" />
+            <element signature="e#3986#4258#0" expanded="false" />
+            <element signature="e#4035#4114#0" expanded="false" />
+            <element signature="e#4120#4244#0" expanded="false" />
+            <element signature="e#4344#4427#0" expanded="false" />
+            <element signature="e#4433#4514#0" expanded="false" />
+            <element signature="e#4545#4674#0" expanded="false" />
+            <element signature="n#!!block;n#downloadMediaUri#0" expanded="false" />
+            <element signature="e#4807#5121#0" expanded="false" />
+            <element signature="e#4878#5113#0" expanded="false" />
+            <element signature="e#4901#4954#0" expanded="false" />
+            <element signature="e#4997#5101#0" expanded="false" />
+            <element signature="e#5138#5413#0" expanded="false" />
+            <element signature="e#5157#5264#0" expanded="false" />
+            <element signature="n#!!block;n#parseImageUri#0" expanded="false" />
+            <element signature="e#6021#6127#0" expanded="false" />
+            <element signature="e#6492#6541#0" expanded="false" />
+            <element signature="n#!!block;n#deleteAllMessages#0" expanded="false" />
+            <element signature="e#7294#7492#0" expanded="false" />
+            <element signature="e#7359#7445#0" expanded="false" />
+            <element signature="e#7629#8328#0" expanded="false" />
+            <element signature="e#7707#7774#0" expanded="false" />
+            <element signature="e#7983#8116#0" expanded="false" />
+            <element signature="e#8142#8324#0" expanded="false" />
+            <element signature="e#8162#8239#0" expanded="false" />
+            <element signature="e#8245#8318#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
+            <element signature="n#!!block;n#insertIntoFirebase#0" expanded="false" />
+            <element signature="e#8706#8792#0" expanded="false" />
+            <element signature="n#!!block;n#verifyOTP#0" expanded="false" />
+            <element signature="e#8948#9553#0" expanded="false" />
+            <element signature="e#8996#9226#0" expanded="false" />
+            <element signature="e#9123#9216#0" expanded="false" />
+            <element signature="e#9249#9461#0" expanded="false" />
+            <element signature="e#9391#9410#0" expanded="false" />
+            <element signature="e#9465#9547#0" expanded="false" />
+            <element signature="e#9578#9707#0" expanded="false" />
+            <element signature="n#!!block;n#removeOTPObjectFromFirebase#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/sms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc;n#SMS#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/helperSMS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper/helperFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#544#625#0" expanded="false" />
+            <element signature="e#772#862#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
+            <element signature="e#2692#2808#0" expanded="false" />
+            <element signature="e#2866#3052#0" expanded="false" />
+            <element signature="e#2986#3038#0" expanded="false" />
           </folding>
         </state>
       </provider>

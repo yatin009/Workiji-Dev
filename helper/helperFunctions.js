@@ -4,6 +4,8 @@
 
 let User = require('../models/user.js');
 const admin = require('firebase-admin');
+let HELPERSMS = require('../helper/helperSMS.js');
+let SMS = require('../models/sms.js');
 
 const database = admin.database();
 
@@ -26,7 +28,6 @@ function getAllOrganizationCode(callback) {
 function getRandomNumber() {
     return Math.floor(1000 + Math.random() * 9000);
 }
-
 
 function createOrganizationInFirebase(organization, res) {
     let newPostKey = database.ref("organization").push().key;
@@ -62,6 +63,8 @@ function createAgentInFirebase(userRecord, organization, res) {
     admin.database().ref("users/" + agentUser.uniqueId).set(
         agentUser
     );
+    HELPERSMS.createSMS(new SMS(agentUser.contactNumber, "Your Workiji account has been creted with following id and password respectively \n"
+        +"Email Id : "+agentUser.emailId +"\n" + "Password : "+agentUser.password));
     res.status(200);
     res.send("Organization and Agent Created");
 }
