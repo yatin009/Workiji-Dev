@@ -64,7 +64,7 @@ function createAgentInFirebase(userRecord, organization, res) {
         agentUser
     );
     HELPERSMS.createSMS(new SMS(agentUser.contactNumber, "Your Workiji account has been creted with following id and password respectively \n"
-        +"Email Id : "+agentUser.emailId +"\n" + "Password : "+agentUser.password));
+        + "Email Id : " + agentUser.emailId + "\n" + "Password : " + agentUser.password));
     res.status(200);
     res.send("Organization and Agent Created");
 }
@@ -87,5 +87,10 @@ module.exports = {
             organization.isEnabled = true;
             createOrganizationInFirebase(organization, res);
         });
+    },
+
+    getTicketNumber: function () {
+        let ticketNumeber = new Date().getTime() + "";
+        return (ticketNumeber).substring(ticketNumeber.length - 6);
     }
-}
+};

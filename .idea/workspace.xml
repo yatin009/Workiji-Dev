@@ -4,8 +4,7 @@
     <list default="true" id="165495cf-56de-4acb-90b6-aa12e5b2d8fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper/helperFunctions.js" afterPath="$PROJECT_DIR$/helper/helperFunctions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/twilioTicket.js" afterPath="$PROJECT_DIR$/models/twilioTicket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/register.js" afterPath="$PROJECT_DIR$/routes/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/twilio.js" afterPath="$PROJECT_DIR$/routes/twilio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/twitterTicket.js" afterPath="$PROJECT_DIR$/models/twitterTicket.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,39 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/register.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-                <element signature="e#603#693#0" expanded="false" />
-                <element signature="e#744#837#0" expanded="false" />
-                <element signature="n#!!block;n#registerContractorInFirebase#0" expanded="false" />
-                <element signature="e#925#1142#0" expanded="false" />
-                <element signature="e#1170#1389#0" expanded="false" />
-                <element signature="e#1422#1600#0" expanded="false" />
-                <element signature="n#!!block;n#createContractorInFirebase#0" expanded="false" />
-                <element signature="e#2090#2155#0" expanded="false" />
-                <element signature="n#!!block;n#registerUserInFirebase#0" expanded="false" />
-                <element signature="e#2230#2421#0" expanded="false" />
-                <element signature="e#2449#2779#0" expanded="false" />
-                <element signature="e#2632#2702#0" expanded="false" />
-                <element signature="e#2706#2773#0" expanded="false" />
-                <element signature="e#2812#2990#0" expanded="false" />
-                <element signature="n#!!block;n#createCompanyInFirebase#0" expanded="false" />
-                <element signature="n#!!block;n#createUserInFirebase#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="twilio.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/twilio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="139">
+              <caret line="181" column="34" lean-forward="false" selection-start-line="181" selection-start-column="34" selection-end-line="181" selection-end-column="34" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
                 <element signature="e#562#722#0" expanded="false" />
@@ -126,53 +97,77 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helperFunctions.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/helper/helperFunctions.js">
+      <file leaf-file-name="twilioTicket.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/twilioTicket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-                <element signature="e#544#625#0" expanded="false" />
-                <element signature="e#772#862#0" expanded="false" />
-                <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
-                <element signature="e#2692#2808#0" expanded="false" />
-                <element signature="e#2866#3052#0" expanded="false" />
-                <element signature="e#2986#3038#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="765">
+              <caret line="47" column="50" lean-forward="true" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sms.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/sms.js">
+      <file leaf-file-name="twitter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/twitter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="119">
+              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="twitterTicket.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/twitterTicket.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helperFunctions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helper/helperFunctions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="89" column="6" lean-forward="false" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
               <folding>
-                <element signature="n#!!doc;n#SMS#0" expanded="false" />
+                <element signature="e#0#40#0" expanded="false" />
+                <element signature="e#544#625#0" expanded="false" />
+                <element signature="e#772#862#0" expanded="false" />
+                <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
+                <element signature="e#2698#2814#0" expanded="false" />
+                <element signature="e#2872#3058#0" expanded="false" />
+                <element signature="e#2992#3044#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helperSMS.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helper/helperSMS.js">
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
+                <element signature="e#603#693#0" expanded="false" />
+                <element signature="e#744#837#0" expanded="false" />
+                <element signature="n#!!block;n#registerContractorInFirebase#0" expanded="false" />
+                <element signature="e#925#1142#0" expanded="false" />
+                <element signature="e#1170#1389#0" expanded="false" />
+                <element signature="e#1422#1600#0" expanded="false" />
+                <element signature="n#!!block;n#createContractorInFirebase#0" expanded="false" />
+                <element signature="e#2090#2155#0" expanded="false" />
+                <element signature="n#!!block;n#registerUserInFirebase#0" expanded="false" />
+                <element signature="e#2230#2421#0" expanded="false" />
+                <element signature="e#2449#2779#0" expanded="false" />
+                <element signature="e#2632#2702#0" expanded="false" />
+                <element signature="e#2706#2773#0" expanded="false" />
+                <element signature="e#2812#2990#0" expanded="false" />
+                <element signature="n#!!block;n#createCompanyInFirebase#0" expanded="false" />
+                <element signature="n#!!block;n#createUserInFirebase#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -190,7 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>body</find>
       <find>address</find>
       <find>email</find>
       <find>contact</find>
@@ -220,6 +214,7 @@
       <find>h4</find>
       <find>ticket</find>
       <find>Error creating Agent in firebase authentication</find>
+      <find>ticketNumber</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -246,10 +241,11 @@
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/routes/register.js" />
         <option value="$PROJECT_DIR$/routes/twilio.js" />
-        <option value="$PROJECT_DIR$/models/twilioTicket.js" />
         <option value="$PROJECT_DIR$/models/sms.js" />
         <option value="$PROJECT_DIR$/helper/helperSMS.js" />
         <option value="$PROJECT_DIR$/helper/helperFunctions.js" />
+        <option value="$PROJECT_DIR$/models/twitterTicket.js" />
+        <option value="$PROJECT_DIR$/models/twilioTicket.js" />
       </list>
     </option>
   </component>
@@ -495,28 +491,28 @@
       <workItem from="1509649016083" duration="17094000" />
       <workItem from="1509813508315" duration="14686000" />
       <workItem from="1510090474033" duration="910000" />
-      <workItem from="1510108715014" duration="2997000" />
+      <workItem from="1510108715014" duration="4076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57849000" />
+    <option name="totallyTimeSpent" value="58928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -540,62 +536,12 @@
           <line>227</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/helper/helperFunctions.js</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/firebase.js" />
-    <entry file="file://$PROJECT_DIR$/QikDispatch-Dev-549fe5876000.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -696,20 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/twitter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/import.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -793,16 +725,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/images/landing/landing_image_3.jpeg" />
-    <entry file="file://$PROJECT_DIR$/public/javascripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="e#4581#5626#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -1095,46 +1017,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/register.js">
+    <entry file="file://$PROJECT_DIR$/models/sms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#603#693#0" expanded="false" />
-            <element signature="e#744#837#0" expanded="false" />
-            <element signature="n#!!block;n#registerContractorInFirebase#0" expanded="false" />
-            <element signature="e#925#1142#0" expanded="false" />
-            <element signature="e#1170#1389#0" expanded="false" />
-            <element signature="e#1422#1600#0" expanded="false" />
-            <element signature="n#!!block;n#createContractorInFirebase#0" expanded="false" />
-            <element signature="e#2090#2155#0" expanded="false" />
-            <element signature="n#!!block;n#registerUserInFirebase#0" expanded="false" />
-            <element signature="e#2230#2421#0" expanded="false" />
-            <element signature="e#2449#2779#0" expanded="false" />
-            <element signature="e#2632#2702#0" expanded="false" />
-            <element signature="e#2706#2773#0" expanded="false" />
-            <element signature="e#2812#2990#0" expanded="false" />
-            <element signature="n#!!block;n#createCompanyInFirebase#0" expanded="false" />
-            <element signature="n#!!block;n#createUserInFirebase#0" expanded="false" />
+            <element signature="n#!!doc;n#SMS#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/twilioTicket.js">
+    <entry file="file://$PROJECT_DIR$/helper/helperSMS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="140" column="33" lean-forward="true" selection-start-line="140" selection-start-column="33" selection-end-line="140" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ticket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="101" column="39" lean-forward="false" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/twilio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="139">
+          <caret line="181" column="34" lean-forward="false" selection-start-line="181" selection-start-column="34" selection-end-line="181" selection-end-column="34" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
             <element signature="e#562#722#0" expanded="false" />
@@ -1207,47 +1145,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
+    <entry file="file://$PROJECT_DIR$/models/twitterTicket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/sms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc;n#SMS#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper/helperSMS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/helper/helperFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+        <state relative-caret-position="574">
+          <caret line="89" column="6" lean-forward="false" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
             <element signature="e#544#625#0" expanded="false" />
             <element signature="e#772#862#0" expanded="false" />
             <element signature="n#!!block;n#getRandomNumber#0" expanded="false" />
-            <element signature="e#2692#2808#0" expanded="false" />
-            <element signature="e#2866#3052#0" expanded="false" />
-            <element signature="e#2986#3038#0" expanded="false" />
+            <element signature="e#2698#2814#0" expanded="false" />
+            <element signature="e#2872#3058#0" expanded="false" />
+            <element signature="e#2992#3044#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="58" lean-forward="true" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#603#693#0" expanded="false" />
+            <element signature="e#744#837#0" expanded="false" />
+            <element signature="n#!!block;n#registerContractorInFirebase#0" expanded="false" />
+            <element signature="e#925#1142#0" expanded="false" />
+            <element signature="e#1170#1389#0" expanded="false" />
+            <element signature="e#1422#1600#0" expanded="false" />
+            <element signature="n#!!block;n#createContractorInFirebase#0" expanded="false" />
+            <element signature="e#2090#2155#0" expanded="false" />
+            <element signature="n#!!block;n#registerUserInFirebase#0" expanded="false" />
+            <element signature="e#2230#2421#0" expanded="false" />
+            <element signature="e#2449#2779#0" expanded="false" />
+            <element signature="e#2632#2702#0" expanded="false" />
+            <element signature="e#2706#2773#0" expanded="false" />
+            <element signature="e#2812#2990#0" expanded="false" />
+            <element signature="n#!!block;n#createCompanyInFirebase#0" expanded="false" />
+            <element signature="n#!!block;n#createUserInFirebase#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/twitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/twilioTicket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="47" column="50" lean-forward="true" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>

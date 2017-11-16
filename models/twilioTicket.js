@@ -7,6 +7,7 @@
 
 let RequesterData = require('../models/requesterData.js');
 let TicketTimeline = require('../models/ticketTimeline.js');
+let HELPER = require('../helper/helperFunctions.js');
 
 // function TwilioTicket(message, date, id, msg, lat, lng, address, requesterNumber, city, imageUrl) {
 //     this.agentId = "4HyK2VKuffQvoY5cih8pM7NjGMr1";
@@ -40,7 +41,7 @@ function TwilioTicket(message, date, lat, lng){
     this.searchKeyword = "";
     this.status = "Incoming";
     this.ticketKey = "";
-    this.ticketNumber = new Date().getTime()+"";
+    this.ticketNumber = HELPER.getTicketNumber();
     this.requester = new RequesterData(message.body, null, null, message.buildingUser);
     this.messageId = message.sid;
     this.issue = message.body;

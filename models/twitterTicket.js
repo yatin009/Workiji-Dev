@@ -2,8 +2,9 @@
  * Created by yatin on 21/05/17.
  */
 
-var TwiiterRequesterData = require('../models/requesterData.js');
-var TicketTimeline = require('../models/ticketTimeline.js');
+let TwiiterRequesterData = require('../models/requesterData.js');
+let TicketTimeline = require('../models/ticketTimeline.js');
+let HELPER = require('../helper/helperFunctions.js');
 
 
 function TwitterTicket(date, image_url, id, msg, lat, lng, address, city) {
@@ -17,7 +18,7 @@ function TwitterTicket(date, image_url, id, msg, lat, lng, address, city) {
     this.searchKeyword = "";
     this.status = "Incoming";
     this.ticketKey = "";
-    this.ticketNumber = new Date().getTime()+"";
+    this.ticketNumber = HELPER.getTicketNumber();
     this.requester = new TwiiterRequesterData(msg, address, city);
     this.ticketTimelines = getTimelineArray(date);
     // null parameters
