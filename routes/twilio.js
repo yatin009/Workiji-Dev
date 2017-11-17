@@ -270,10 +270,12 @@ router.post("/verify_otp", function (req, res) {
 function verifyOTP(otp, res) {
     var verified = false, otpChildToRemove;
     let ref = database.ref("otp");
+    console.log(otp);
     ref.once('value', function (snapshot) {
         snapshot.forEach(function (childSnap) {
             let otpChild = childSnap.val();
-            if(otpChild.number === otp.contactNumber && otp.otp === otpChild.otp){
+            console.log(otpChild);
+            if(otpChild.number === parseInt(otp.contactNumber) && otpChild.otp === parseInt(otp.otp)){
                 verified = true;
                 otpChildToRemove = otpChild;
             }
