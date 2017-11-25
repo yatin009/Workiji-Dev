@@ -6,6 +6,7 @@ var express = require('express');
 var router = express.Router();
 const Twitter = require('twitter');
 const Ticket = require('../models/twitterTicket.js');
+const TicketCounter = require('../models/ticketCounter.js');
 const admin = require('firebase-admin');
 const NodeGeocoder = require('node-geocoder');
 const dateFormat = require('dateformat');
@@ -95,7 +96,7 @@ function createTicket(fTicketTweet, res) {
             geocoder.reverse({lat: lat, lon: lng})
                 .then(function (res) {
                     const geoTicket = new Ticket(
-                        dateFormat(childTweet.created_at, "mm-dd-yyyy HH:MM")+"",
+                        dateFormat(childTweet.created_at, "mm-dd-yyyy HH:MM") + "",
                         imageURL,
                         childTweet.id_str,
                         childTweet.text,
@@ -118,7 +119,7 @@ function createTicket(fTicketTweet, res) {
             lat = 43.7854;
             lng = -79.2265;
             tickets.push(new Ticket(
-                dateFormat(childTweet.created_at, "mm-dd-yyyy HH:MM")+"",
+                dateFormat(childTweet.created_at, "mm-dd-yyyy HH:MM") + "",
                 imageURL,
                 childTweet.id_str,
                 childTweet.text,
@@ -128,32 +129,99 @@ function createTicket(fTicketTweet, res) {
                 "Dummy City"))
         }
     });
-    tickets.forEach(function (ticket) {
-        const newPostKey = database.ref("ticketing").push().key;
-        ticket.ticketKey = newPostKey;
-        admin.database().ref("ticketing/" + newPostKey).set(
-            ticket
-        );
+    genrateTicketNumber(tickets);
+}
 
+function genrateTicketNumber(tickets, res) {
+    let adaRef = database.ref("ticket_counter");
+    tickets.forEach(function (ticket) {
+        adaRef.transaction(function(ticketCounter) {
+            console.log("printing ticket counter");
+            console.log(ticketCounter);
+            if (ticketCounter) {
+                ticketCounter.counter++;
+            }else{
+                ticketCounter = new TicketCounter(0);
+            }
+            return ticketCounter;
+        }, function(error, committed, snapshot){
+            if (error) {
+                console.log('Transaction failed abnormally!', error);
+            } else if (!committed) {
+                console.log('We aborted the transaction (because ada already exists).');
+            } else {
+                console.log('Counter added!');
+            }
+            ticket.ticketNumber = formatTicketNumber(snapshot.val().counter);
+            console.log("ticketNumber: ", ticket.ticketNumber);
+            pushTicket(ticket)
+        });
     });
     res.status(200);
-    res.send('Tickets created from new tweet ' + fTicketTweet.length);
+    res.send('Tickets created from new tweet ' + tickets.length);
+}
+
+function formatTicketNumber(counter){
+    console.log("Current Counter: ", counter);
+    if(counter.toString().length === 1){
+        return "0000"+counter;
+    }else if(counter.toString().length === 2){
+        return "00"+counter;
+    }else if(counter.toString().length === 3){
+        return "00"+counter;
+    }else if(counter.toString().length === 4){
+        return "0"+counter;
+    }
+    return counter.toString();
+
+}
+
+function pushTicket(ticket){
+    const newPostKey = database.ref("ticketing").push().key;
+    ticket.ticketKey = newPostKey;
+    admin.database().ref("ticketing/" + newPostKey).set(
+        ticket
+    );
 }
 
 router.get('/test_function', function (req, res) {
-    console.log("test_function Started >> ",new Date()+"");
-    getTicketNumber(function (ticketNumber) {
-        console.log('Ticket number count: ', ticketNumber);
-        if(ticketNumber === -1){
-            return null;
+
+    let adaRef = database.ref("ticket_counter");
+    adaRef.transaction(function (ticketCounter) {
+        console.log("printing ticket counter");
+        console.log(ticketCounter);
+        if (ticketCounter) {
+            ticketCounter.counter++;
+        } else {
+            ticketCounter = new TicketCounter(0);
         }
-        console.log('Ticket number created');
+        return ticketCounter;
+    }, function (error, committed, snapshot) {
+        if (error) {
+            console.log('Transaction failed abnormally!', error);
+        } else if (!committed) {
+            console.log('We aborted the transaction (because ada already exists).');
+        } else {
+            console.log('User ada added!');
+        }
+        console.log("Ada's data: ", snapshot.val());
     });
-    console.log("test_function ended >> ",new Date()+"")
+
+    console.log("test_function Started >> ", new Date() + "");
+    // getTicketNumber(function (ticketNumber) {
+    //     console.log('Ticket number count: ', ticketNumber);
+    //     if(ticketNumber === -1){
+    //         return null;
+    //     }
+    //     console.log('Ticket number created');
+    // });
+    console.log("test_function ended >> ", new Date() + "")
+    res.status(200);
+    res.send("Hello World");
 });
 
 function getTicketNumber(callback) {
-    console.log("getTicketNumber Started >> ",new Date()+"");
+    console.log("getTicketNumber Started >> ", new Date() + "");
     const ref = database.ref("ticketing");
     const tickets = [];
     // Attach an asynchronous callback to read the data at our posts reference
@@ -169,15 +237,15 @@ function getTicketNumber(callback) {
     });
 }
 
-function updateAnalytics(tickets){
+function updateAnalytics(tickets) {
     var myMap = new Map();
-    tickets.forEach(function(ticket){
+    tickets.forEach(function (ticket) {
         const tDate = formatTicketDate(ticket.dateTime);
-        if(myMap.get(tDate)){
+        if (myMap.get(tDate)) {
             tArray = myMap.get(tDate);
             tArray.push(ticket);
             myMap.set(tDate, tArray);
-        }else{
+        } else {
             var tArray = [];
             tArray.push(ticket);
             myMap.set(tDate, tArray);
@@ -248,10 +316,10 @@ function updateAnalytics(tickets){
 
     const ref = database.ref("analytics");
     ref.update(analytic);
-    console.log("Update Analytics called >> ",new Date()+"")
+    console.log("Update Analytics called >> ", new Date() + "")
 }
 
-function formatTicketDate(ticketDate){
+function formatTicketDate(ticketDate) {
     console.log(ticketDate);
     return dateFormat(ticketDate, "mm-dd-yyyy");
 }

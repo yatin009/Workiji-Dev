@@ -10,6 +10,7 @@ let OTP = require('../models/otp.js');
 let twilio = require('twilio');
 let admin = require('firebase-admin');
 let async = require('async');
+const TicketCounter = require('../models/ticketCounter.js');
 let NodeGeocoder = require('node-geocoder');
 const dateFormat = require('dateformat');
 let Organization = require('../models/organization.js');
@@ -179,7 +180,7 @@ function createTicket(fTicketMessage, res) {
                     lat = res[0].latitude;
                     lng = res[0].longitude;
                 }
-                pushTicket(new Ticket(
+                genrateTicketNumber(new Ticket(
                     childMessage,
                     dateFormat(childMessage.dateCreated, "mm-dd-yyyy HH:MM") + "",
                     res[0].latitude,
@@ -193,6 +194,46 @@ function createTicket(fTicketMessage, res) {
     });
     res.status(200);
     res.send('Tickets created from new messages ' + fTicketMessage.length);
+}
+
+function genrateTicketNumber(ticket){
+    let adaRef = database.ref("ticket_counter");
+    adaRef.transaction(function(ticketCounter) {
+        console.log("printing ticket counter");
+        console.log(ticketCounter);
+        if (ticketCounter) {
+            ticketCounter.counter++;
+        }else{
+            ticketCounter = new TicketCounter(0);
+        }
+        return ticketCounter;
+    }, function(error, committed, snapshot){
+        if (error) {
+            console.log('Transaction failed abnormally!', error);
+        } else if (!committed) {
+            console.log('We aborted the transaction (because ada already exists).');
+        } else {
+            console.log('Counter added!');
+        }
+        ticket.ticketNumber = formatTicketNumber(snapshot.val().counter);
+        console.log("ticketNumber: ", ticket.ticketNumber);
+        pushTicket(ticket)
+    });
+}
+
+function formatTicketNumber(counter){
+    console.log("Current Counter: ", counter);
+    if(counter.toString().length === 1){
+        return "0000"+counter;
+    }else if(counter.toString().length === 2){
+        return "00"+counter;
+    }else if(counter.toString().length === 3){
+        return "00"+counter;
+    }else if(counter.toString().length === 4){
+        return "0"+counter;
+    }
+    return counter.toString();
+
 }
 
 function pushTicket(ticket) {
