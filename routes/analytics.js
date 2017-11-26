@@ -11,10 +11,15 @@ const database = admin.database();
 
 router.post('', function (req, res) {
     let dateRange = req.body;
-    downloadTickets(dateRange, res);
+    downloadTickets(dateRange, false, res);
 });
 
-function downloadTickets(dateRange, res) {
+router.post('/date_wise', function (req, res) {
+    let dateRange = req.body;
+    downloadTickets(dateRange, true, res);
+});
+
+function downloadTickets(dateRange, isDateWise, res) {
     const tickets = [];
     const ref = database.ref("ticketing");
     // Attach an asynchronous callback to read the data at our posts reference
@@ -26,7 +31,13 @@ function downloadTickets(dateRange, res) {
             }
         });
         if (tickets.length > 0) {
-            calculateAnalytics(tickets, res);
+            if(isDateWise){
+                calculateAnalyticsDateWise(tickets, res);
+            }else {
+                var analytic = calculateAnalytics(tickets);
+                res.status(200);
+                res.send(analytic);
+            }
         } else {
             res.status(200);
             res.send(emptyAnalytics());
@@ -46,8 +57,8 @@ function validDateRange(date, dateRange){
 
 }
 
-function calculateAnalytics(tickets, res) {
-    var analytic = emptyAnalytics();
+function calculateAnalytics(tickets) {
+    let analytic = emptyAnalytics();
 
     tickets.forEach(function (ticket) {
         var isOpen = true;
@@ -108,8 +119,28 @@ function calculateAnalytics(tickets, res) {
                 break;
         }
     });
+    return analytic;
+}
+
+function calculateAnalyticsDateWise(tickets, res) {
+    let analyticFull = calculateAnalytics(tickets);
+    var ticketMap = new Map();
+    var analyticMap = new Map();
+    tickets.forEach(function (ticket) {
+        let ticketDate = dateFormat(ticket.dateTime, "mm-dd-yyyy");
+        let childTickets = ticketMap.get(ticketDate);
+        if(childTickets){
+            childTickets.push(ticket)
+        }else{
+            childTickets = [ticket];
+        }
+        ticketMap.set(ticketDate, childTickets);
+    });
+    ticketMap.forEach(function (value, key) {
+        analyticMap.set(key, calculateAnalytics(value));
+    });
     res.status(200);
-    res.send(analytic);
+    res.send(JSON.stringify({analyticFull, analyticMap: Array.from(analyticMap)}));
 }
 
 function emptyAnalytics(){
