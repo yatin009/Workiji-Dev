@@ -1,8 +1,8 @@
 /**
  * Created by yatin on 15/10/17.
  */
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 const admin = require('firebase-admin');
 let Organization = require('../models/organization.js');
 let Contractor = require('../models/contractor.js');

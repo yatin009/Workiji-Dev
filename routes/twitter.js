@@ -186,27 +186,29 @@ function pushTicket(ticket){
 
 router.get('/test_function', function (req, res) {
 
-    let adaRef = database.ref("ticket_counter");
-    adaRef.transaction(function (ticketCounter) {
-        console.log("printing ticket counter");
-        console.log(ticketCounter);
-        if (ticketCounter) {
-            ticketCounter.counter++;
-        } else {
-            ticketCounter = new TicketCounter(0);
-        }
-        return ticketCounter;
-    }, function (error, committed, snapshot) {
-        if (error) {
-            console.log('Transaction failed abnormally!', error);
-        } else if (!committed) {
-            console.log('We aborted the transaction (because ada already exists).');
-        } else {
-            console.log('User ada added!');
-        }
-        console.log("Ada's data: ", snapshot.val());
-    });
+    // let adaRef = database.ref("ticket_counter");
+    // adaRef.transaction(function (ticketCounter) {
+    //     console.log("printing ticket counter");
+    //     console.log(ticketCounter);
+    //     if (ticketCounter) {
+    //         ticketCounter.counter++;
+    //     } else {
+    //         ticketCounter = new TicketCounter(0);
+    //     }
+    //     return ticketCounter;
+    // }, function (error, committed, snapshot) {
+    //     if (error) {
+    //         console.log('Transaction failed abnormally!', error);
+    //     } else if (!committed) {
+    //         console.log('We aborted the transaction (because ada already exists).');
+    //     } else {
+    //         console.log('User ada added!');
+    //     }
+    //     console.log("Ada's data: ", snapshot.val());
+    // });
 
+    var startTime = new Date();
+    console.log("test_function Started >> ", startTime + "");
     console.log("test_function Started >> ", new Date() + "");
     // getTicketNumber(function (ticketNumber) {
     //     console.log('Ticket number count: ', ticketNumber);

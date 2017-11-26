@@ -21,6 +21,7 @@ const importRoute = require('./routes/import');
 const register = require('./routes/register');
 const twilio = require('./routes/twilio');
 const twitter = require('./routes/twitter');
+const analytics = require('./routes/analytics');
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.use('/import', importRoute);
 app.use('/register', register);
 app.use('/twilio', twilio);
 app.use('/twitter', twitter);
+app.use('/analytics', analytics);
 
 
 // catch 404 and forward to error handler
