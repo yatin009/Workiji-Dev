@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="165495cf-56de-4acb-90b6-aa12e5b2d8fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -531,11 +529,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512260453764</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="City page added">
+      <created>1512327956454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512327956454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77910000" />
+    <option name="totallyTimeSpent" value="77940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1948" height="1167" extended-state="0" />
@@ -577,7 +582,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit main page changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit main page changes" />
+    <MESSAGE value="City page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="City page added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
