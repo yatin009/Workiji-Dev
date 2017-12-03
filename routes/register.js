@@ -85,12 +85,12 @@ function registerUserInFirebase(usr, res){
             console.log("Error creating new user:", error);
             res.status(500);
             res.send("Error creating Contractor in firebase authentication");
-        });
+        });user
 }
 
 function createCompanyInFirebase(userRecord, usr, res){
     var company = new Company(usr, userRecord);
-    admin.database().ref("company/" + user.uniqueId).set(
+    admin.database().ref("company/" + company.uniqueId).set(
         company
     );
     createUserInFirebase(userRecord, usr, res);
