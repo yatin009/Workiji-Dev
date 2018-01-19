@@ -80,12 +80,11 @@ function registerUserInFirebase(usr, res){
         }else{
             createUserInFirebase(userRecord, usr, res);
         }
-    })
-        .catch(function(error) {
+    }).catch(function(error) {
             console.log("Error creating new user:", error);
             res.status(500);
             res.send("Error creating Contractor in firebase authentication");
-        });user
+        });
 }
 
 function createCompanyInFirebase(userRecord, usr, res){

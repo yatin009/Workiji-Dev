@@ -34,13 +34,17 @@ html(lang='en', ng-app='workijiApp')
                     a.logo(href='#')
                         img(src='./images/logo_f.png', alt='Best start for your business', height='80', width='85')
                     a.login_btn(href='#') Login
-                    ul.soc_nav
-                        li
-                            a.icon-soc-googleplus(href='#')
-                        li
-                            a.icon-soc-facebook(href='#')
-                        li
-                            a.icon-soc-twitter(href='#')
+                    form.searchbox
+                        input.searchbox-input(type='search', placeholder='Search......', name='search', onkeyup='buttonUp();', required='', ng-model='formData.search')
+                        input.searchbox-submit(ng-click="searchTicket()", value='GO')
+                        span.searchbox-icon Search
+                    //ul.soc_nav
+                    //    li
+                    //        a.icon-soc-googleplus(href='#')
+                    //    li
+                    //        a.icon-soc-facebook(href='#')
+                    //    li
+                    //        a.icon-soc-twitter(href='#')
             // HEADER END
             // INTRO BEGIN
             section#intro
@@ -289,7 +293,7 @@ html(lang='en', ng-app='workijiApp')
         script(src='javascripts/custom.js')
         script(src="javascripts/angular.min.js")
         script(src="javascripts/controllers/main.js")
-        script(src="javascripts/services/todos.js")
+        script(src="javascripts/services/tod`os.js")
         script(src="javascripts/core.js")
 
 
