@@ -24,13 +24,13 @@ $(document).ready(function () {
 //------------------------------------------------------------------------
     var owl = $("#testimonials-slider");
     owl.owlCarousel({
-        items: 7,
-        itemsDesktop: [1400, 4],
-        itemsDesktopSmall: [1200, 3],
-        itemsTablet: [900, 2],
-        itemsMobile: [600, 1],
-        autoPlay: 4000,
-        stopOnHover: true
+        items : 7,
+        itemsDesktop : [1400,7],
+        itemsDesktopSmall : [1200,6],
+        itemsTablet: [900,2], 
+        itemsMobile : [600,1],
+		autoPlay : 4000,
+		stopOnHover:true
     });
 
 
